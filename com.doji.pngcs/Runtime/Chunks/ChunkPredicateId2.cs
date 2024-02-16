@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Hjg.Pngcs.Chunks
-{
+﻿namespace Hjg.Pngcs.Chunks {
     /// <summary>
     /// match if have same id and, if Text (or SPLT) if have the asame key
     /// </summary>

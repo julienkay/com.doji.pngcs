@@ -2,15 +2,10 @@ namespace Hjg.Pngcs.Chunks {
 
     using Hjg.Pngcs;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.IO;
-    using System.Runtime.CompilerServices;
 
- /// <summary>
+    /// <summary>
     /// tRNS chunk: http://www.w3.org/TR/PNG/#11tRNS
- /// </summary>
+    /// </summary>
     public class PngChunkTRNS : PngChunkSingle {
         public const string ID = ChunkHelper.tRNS;
     

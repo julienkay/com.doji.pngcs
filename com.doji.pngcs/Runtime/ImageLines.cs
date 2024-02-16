@@ -1,9 +1,4 @@
-﻿using Hjg.Pngcs;
-using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Hjg.Pngcs {
+﻿namespace Hjg.Pngcs {
     /// <summary>
     /// Wraps a set of rows from a image, read in a single operation, stored in a int[][] or byte[][] matrix
     /// 

@@ -1,11 +1,4 @@
 ﻿namespace Hjg.Pngcs {
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.IO;
-    using System.Runtime.CompilerServices;
-
     /// <summary>
     /// Utility functions for C# porting
     /// </summary>

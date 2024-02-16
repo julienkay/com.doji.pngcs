@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-using System.Text;
-
-namespace Hjg.Pngcs.Chunks {
+﻿namespace Hjg.Pngcs.Chunks {
     /// <summary>
     /// Match if have same Chunk Id
     /// </summary>

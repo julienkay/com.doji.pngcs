@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Hjg.Pngcs.Chunks {
+﻿namespace Hjg.Pngcs.Chunks {
     /// <summary>
     /// An ad-hoc criterion, perhaps useful, for equivalence.
     /// <see cref="ChunkHelper.Equivalent(PngChunk,PngChunk)"/> 

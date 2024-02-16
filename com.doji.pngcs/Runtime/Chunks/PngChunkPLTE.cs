@@ -2,11 +2,6 @@ namespace Hjg.Pngcs.Chunks {
 
     using Hjg.Pngcs;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.IO;
-    using System.Runtime.CompilerServices;
 
     /// <summary>
     /// PLTE Palette chunk: this is the only optional critical chunk

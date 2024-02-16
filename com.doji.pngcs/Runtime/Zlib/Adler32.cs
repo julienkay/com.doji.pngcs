@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Hjg.Pngcs.Zlib {
+﻿namespace Hjg.Pngcs.Zlib {
 
     public class Adler32 {
         private uint a = 1;

@@ -1,12 +1,6 @@
 namespace Hjg.Pngcs.Chunks {
 
     using Hjg.Pngcs;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.IO;
-    using System.Runtime.CompilerServices;
 
     /// <summary>
     /// oFFs chunk: http://www.libpng.org/pub/png/spec/register/pngext-1.3.0-pdg.html#C.oFFs

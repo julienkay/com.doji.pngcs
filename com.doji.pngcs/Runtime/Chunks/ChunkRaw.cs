@@ -1,9 +1,8 @@
 using Hjg.Pngcs.Zlib;
-using System;
 using System.IO;
 
 namespace Hjg.Pngcs.Chunks {
-    
+
     /// <summary>
     /// Wraps the raw chunk data
     /// </summary>

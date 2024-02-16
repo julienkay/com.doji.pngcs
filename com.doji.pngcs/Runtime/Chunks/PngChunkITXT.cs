@@ -1,12 +1,7 @@
 namespace Hjg.Pngcs.Chunks {
 
     using Hjg.Pngcs;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.ComponentModel;
     using System.IO;
-    using System.Runtime.CompilerServices;
     /// <summary>
     /// iTXt chunk:  http://www.w3.org/TR/PNG/#11iTXt
     /// One of the three text chunks

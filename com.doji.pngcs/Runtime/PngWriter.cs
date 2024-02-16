@@ -1,6 +1,5 @@
 using Hjg.Pngcs.Chunks;
 using Hjg.Pngcs.Zlib;
-using System;
 using System.Collections.Generic;
 using System.IO;
 

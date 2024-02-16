@@ -1,10 +1,7 @@
 {
     "name": "Doji.Pngcs",
     "rootNamespace": "",
-    "references": [
-        "GUID:c98377141161c7746a178fb5cb1af075",
-        "GUID:792a551df4a0292469be78bbb192f6d6"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
@@ -12,6 +9,17 @@
     "precompiledReferences": [],
     "autoReferenced": true,
     "defineConstraints": [],
-    "versionDefines": [],
+    "versionDefines": [
+        {
+            "name": "com.doji.pngcs",
+            "expression": "",
+            "define": ""
+        },
+        {
+            "name": "com.unity.sharp-zip-lib",
+            "expression": "",
+            "define": "SHARPZIPLIB"
+        }
+    ],
     "noEngineReferences": false
 }

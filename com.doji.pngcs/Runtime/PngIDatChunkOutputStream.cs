@@ -1,12 +1,7 @@
 namespace Hjg.Pngcs {
 
     using Hjg.Pngcs.Chunks;
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.ComponentModel;
     using System.IO;
-    using System.Runtime.CompilerServices;
 
     /// <summary>
     /// outputs the stream for IDAT chunk , fragmented at fixed size (32k default).

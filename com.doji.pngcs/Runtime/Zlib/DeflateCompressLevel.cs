@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Hjg.Pngcs.Zlib {
+﻿namespace Hjg.Pngcs.Zlib {
     // DEFLATE compression levels 0-9
     public class DeflateCompressLevel {
         public const int NO_COMPRESSION = 0;

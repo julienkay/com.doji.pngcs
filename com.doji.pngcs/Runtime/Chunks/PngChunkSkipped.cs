@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Hjg.Pngcs.Chunks;
-using Hjg.Pngcs;
-
-namespace Hjg.Pngcs.Chunks {
+﻿namespace Hjg.Pngcs.Chunks {
     class PngChunkSkipped : PngChunk {
         internal PngChunkSkipped(string id, ImageInfo imgInfo, int clen)
             : base(id, imgInfo) {

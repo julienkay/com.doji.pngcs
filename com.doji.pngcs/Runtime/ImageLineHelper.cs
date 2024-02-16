@@ -1,13 +1,7 @@
-namespace Hjg.Pngcs
-{
+namespace Hjg.Pngcs {
 
     using Hjg.Pngcs.Chunks;
     using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.ComponentModel;
-    using System.IO;
-    using System.Runtime.CompilerServices;
 
     /// <summary>
     /// Bunch of utility static methods to process/analyze an image line. 

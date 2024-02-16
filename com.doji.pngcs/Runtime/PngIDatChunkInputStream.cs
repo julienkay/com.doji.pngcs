@@ -10,7 +10,7 @@ namespace Hjg.Pngcs {
     /// </summary>
     internal class PngIDatChunkInputStream : Stream {
         private readonly Stream inputStream;
-        private readonly Hjg.Pngcs.Zlib.CRC32 crcEngine;
+        private readonly CRC32 crcEngine;
         private bool checkCrc;
         private int lenLastChunk;
         private byte[] idLastChunk;
@@ -59,7 +59,7 @@ namespace Hjg.Pngcs {
             // we know it's a IDAT
             Array.Copy((Array)(Chunks.ChunkHelper.b_IDAT), 0, (Array)(idLastChunk), 0, 4);
             crcEngine.Update(idLastChunk, 0, 4);
-            foundChunksInfo.Add(new PngIDatChunkInputStream.IdatChunkInfo(lenLastChunk, offset_0 - 8));
+            foundChunksInfo.Add(new IdatChunkInfo(lenLastChunk, offset_0 - 8));
             // PngHelper.logdebug("IDAT Initial fragment: len=" + lenLastChunk);
             if (lenLastChunk == 0)
                 EndChunkGoForNext(); // rare, but...
@@ -96,7 +96,7 @@ namespace Hjg.Pngcs {
 
                 ended = !PngCsUtils.arraysEqual4(idLastChunk, Chunks.ChunkHelper.b_IDAT);
                 if (!ended) {
-                    foundChunksInfo.Add(new PngIDatChunkInputStream.IdatChunkInfo(lenLastChunk, (offset - 8)));
+                    foundChunksInfo.Add(new IdatChunkInfo(lenLastChunk, (offset - 8)));
                     if (checkCrc)
                         crcEngine.Update(idLastChunk, 0, 4);
                 }

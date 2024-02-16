@@ -20,7 +20,7 @@
         public int[][] Scanlines { get; private set; }
         public byte[][] ScanlinesB { get; private set; }
 
-        public ImageLines(global::Hjg.Pngcs.ImageInfo ImgInfo, global::Hjg.Pngcs.ImageLine.ESampleType sampleType, bool unpackedMode, int rowOffset, int nRows, int rowStep) {
+        public ImageLines(ImageInfo ImgInfo, ImageLine.ESampleType sampleType, bool unpackedMode, int rowOffset, int nRows, int rowStep) {
             this.ImgInfo = ImgInfo;
             channels = ImgInfo.Channels;
             bitDepth = ImgInfo.BitDepth;

@@ -91,7 +91,7 @@ namespace Hjg.Pngcs.Chunks {
         private static Dictionary<string, Type> factoryMap = initFactory();
 
         private static Dictionary<string, Type> initFactory() {
-            Dictionary<string, Type> f = new Dictionary<string, System.Type>();
+            Dictionary<string, Type> f = new Dictionary<string, Type>();
             f.Add(ChunkHelper.IDAT, typeof(PngChunkIDAT));
             f.Add(ChunkHelper.IHDR, typeof(PngChunkIHDR));
             f.Add(ChunkHelper.PLTE, typeof(PngChunkPLTE));

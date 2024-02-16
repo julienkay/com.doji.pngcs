@@ -194,7 +194,7 @@ namespace Hjg.Pngcs {
         ///
         private void WriteSignatureAndIHDR() {
             CurrentChunkGroup = ChunksList.CHUNK_GROUP_0_IDHR;
-            PngHelperInternal.WriteBytes(outputStream, Hjg.Pngcs.PngHelperInternal.PNG_ID_SIGNATURE); // signature
+            PngHelperInternal.WriteBytes(outputStream, PngHelperInternal.PNG_ID_SIGNATURE); // signature
             PngChunkIHDR ihdr = new PngChunkIHDR(ImgInfo);
             // http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html
             ihdr.Cols = ImgInfo.Cols;
@@ -298,19 +298,19 @@ namespace Hjg.Pngcs {
             FilterType filterType = filterStrat.gimmeFilterType(rown, true);
             rowbfilter[0] = (byte)(int)filterType;
             switch (filterType) {
-                case Hjg.Pngcs.FilterType.FILTER_NONE:
+                case FilterType.FILTER_NONE:
                     FilterRowNone();
                     break;
-                case Hjg.Pngcs.FilterType.FILTER_SUB:
+                case FilterType.FILTER_SUB:
                     FilterRowSub();
                     break;
-                case Hjg.Pngcs.FilterType.FILTER_UP:
+                case FilterType.FILTER_UP:
                     FilterRowUp();
                     break;
-                case Hjg.Pngcs.FilterType.FILTER_AVERAGE:
+                case FilterType.FILTER_AVERAGE:
                     FilterRowAverage();
                     break;
-                case Hjg.Pngcs.FilterType.FILTER_PAETH:
+                case FilterType.FILTER_PAETH:
                     FilterRowPaeth();
                     break;
                 default:

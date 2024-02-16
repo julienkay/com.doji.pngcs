@@ -104,7 +104,7 @@ namespace Hjg.Pngcs.Chunks {
             PalName = otherx.PalName;
             SampleDepth = otherx.SampleDepth;
             Palette = new int[otherx.Palette.Length];
-            System.Array.Copy(otherx.Palette, 0, Palette, 0, Palette.Length);
+            Array.Copy(otherx.Palette, 0, Palette, 0, Palette.Length);
 
         }
 

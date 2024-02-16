@@ -111,14 +111,14 @@ namespace Hjg.Pngcs.Chunks {
                 throw new PngjOutputException("bad chunk group?");
             int minChunkGroup, maxChunkGroup;
             if (c.mustGoBeforePLTE())
-                minChunkGroup = maxChunkGroup = ChunksList.CHUNK_GROUP_1_AFTERIDHR;
+                minChunkGroup = maxChunkGroup = CHUNK_GROUP_1_AFTERIDHR;
             else if (c.mustGoBeforeIDAT()) {
-                maxChunkGroup = ChunksList.CHUNK_GROUP_3_AFTERPLTE;
-                minChunkGroup = c.mustGoAfterPLTE() ? ChunksList.CHUNK_GROUP_3_AFTERPLTE
-                        : ChunksList.CHUNK_GROUP_1_AFTERIDHR;
+                maxChunkGroup = CHUNK_GROUP_3_AFTERPLTE;
+                minChunkGroup = c.mustGoAfterPLTE() ? CHUNK_GROUP_3_AFTERPLTE
+                        : CHUNK_GROUP_1_AFTERIDHR;
             } else {
-                maxChunkGroup = ChunksList.CHUNK_GROUP_5_AFTERIDAT;
-                minChunkGroup = ChunksList.CHUNK_GROUP_1_AFTERIDHR;
+                maxChunkGroup = CHUNK_GROUP_5_AFTERIDAT;
+                minChunkGroup = CHUNK_GROUP_1_AFTERIDHR;
             }
 
             int preferred = maxChunkGroup;

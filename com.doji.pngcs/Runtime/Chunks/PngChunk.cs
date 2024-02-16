@@ -82,9 +82,9 @@ namespace Hjg.Pngcs.Chunks {
         protected PngChunk(string id, ImageInfo imgInfo) {
             this.Id = id;
             this.ImgInfo = imgInfo;
-            this.Crit = Hjg.Pngcs.Chunks.ChunkHelper.IsCritical(id);
-            this.Pub = Hjg.Pngcs.Chunks.ChunkHelper.IsPublic(id);
-            this.Safe = Hjg.Pngcs.Chunks.ChunkHelper.IsSafeToCopy(id);
+            this.Crit = ChunkHelper.IsCritical(id);
+            this.Pub = ChunkHelper.IsPublic(id);
+            this.Safe = ChunkHelper.IsSafeToCopy(id);
             this.Priority = false;
             this.ChunkGroup = -1;
             this.Length = -1;
@@ -149,7 +149,7 @@ namespace Hjg.Pngcs.Chunks {
         }
 
         internal static PngChunk Factory(ChunkRaw chunk, ImageInfo info) {
-            PngChunk c = FactoryFromId(Hjg.Pngcs.Chunks.ChunkHelper.ToString(chunk.IdBytes), info);
+            PngChunk c = FactoryFromId(ChunkHelper.ToString(chunk.IdBytes), info);
             c.Length = chunk.Len;
             c.ParseFromRaw(chunk);
             return c;

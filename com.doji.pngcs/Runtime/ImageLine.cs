@@ -250,7 +250,7 @@ namespace Hjg.Pngcs {
         /// <remarks>You should rarely use this</remarks>
         /// <param name="b"></param>
         internal void SetScanLine(int[] b) { // makes copy
-            System.Array.Copy((Array)(b), 0, (Array)(Scanline), 0, Scanline.Length);
+            Array.Copy((Array)(b), 0, (Array)(Scanline), 0, Scanline.Length);
         }
 
         /// <summary>
@@ -261,7 +261,7 @@ namespace Hjg.Pngcs {
         internal int[] GetScanLineCopy(int[] b) {
             if (b == null || b.Length < Scanline.Length)
                 b = new int[Scanline.Length];
-            System.Array.Copy((Array)(Scanline), 0, (Array)(b), 0, Scanline.Length);
+            Array.Copy((Array)(Scanline), 0, (Array)(b), 0, Scanline.Length);
             return b;
         }
 

@@ -43,7 +43,7 @@ namespace Hjg.Pngcs.Chunks {
         /// <param name="x"></param>
         /// <returns></returns>
         public static byte[] ToBytes(string x) {
-            return Hjg.Pngcs.PngHelperInternal.charsetLatin1.GetBytes(x);
+            return PngHelperInternal.charsetLatin1.GetBytes(x);
         }
 
         /// <summary>
@@ -52,7 +52,7 @@ namespace Hjg.Pngcs.Chunks {
         /// <param name="x"></param>
         /// <returns></returns>
         public static string ToString(byte[] x) {
-            return Hjg.Pngcs.PngHelperInternal.charsetLatin1.GetString(x);
+            return PngHelperInternal.charsetLatin1.GetString(x);
         }
         /// <summary>
         ///  Converts to String using Latin1 (ISO-8859-1)
@@ -62,7 +62,7 @@ namespace Hjg.Pngcs.Chunks {
         /// <param name="len"></param>
         /// <returns></returns>
         public static string ToString(byte[] x, int offset, int len) {
-            return Hjg.Pngcs.PngHelperInternal.charsetLatin1.GetString(x, offset, len);
+            return PngHelperInternal.charsetLatin1.GetString(x, offset, len);
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace Hjg.Pngcs.Chunks {
         /// <param name="x"></param>
         /// <returns></returns>
         public static byte[] ToBytesUTF8(string x) {
-            return Hjg.Pngcs.PngHelperInternal.charsetUtf8.GetBytes(x);
+            return PngHelperInternal.charsetUtf8.GetBytes(x);
         }
 
         /// <summary>
@@ -80,7 +80,7 @@ namespace Hjg.Pngcs.Chunks {
         /// <param name="x"></param>
         /// <returns></returns>
         public static string ToStringUTF8(byte[] x) {
-            return Hjg.Pngcs.PngHelperInternal.charsetUtf8.GetString(x);
+            return PngHelperInternal.charsetUtf8.GetString(x);
         }
         /// <summary>
         /// Converts to string using UTF-8
@@ -90,7 +90,7 @@ namespace Hjg.Pngcs.Chunks {
         /// <param name="len"></param>
         /// <returns></returns>
         public static string ToStringUTF8(byte[] x, int offset, int len) {
-            return Hjg.Pngcs.PngHelperInternal.charsetUtf8.GetString(x, offset, len);
+            return PngHelperInternal.charsetUtf8.GetString(x, offset, len);
         }
         /// <summary>
         /// Writes full array of bytes to stream

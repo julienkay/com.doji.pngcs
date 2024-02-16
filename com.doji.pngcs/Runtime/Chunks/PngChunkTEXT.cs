@@ -21,8 +21,8 @@ namespace Hjg.Pngcs.Chunks {
         public override ChunkRaw CreateRawChunk() {
             if (key.Length == 0)
                 throw new PngjException("Text chunk key must be non empty");
-            byte[] b1 = Hjg.Pngcs.PngHelperInternal.charsetLatin1.GetBytes(key);
-            byte[] b2 = Hjg.Pngcs.PngHelperInternal.charsetLatin1.GetBytes(val);
+            byte[] b1 = PngHelperInternal.charsetLatin1.GetBytes(key);
+            byte[] b2 = PngHelperInternal.charsetLatin1.GetBytes(val);
             ChunkRaw chunk = createEmptyChunk(b1.Length + b2.Length + 1, true);
             Array.Copy(b1, 0, chunk.Data, 0, b1.Length);
             chunk.Data[b1.Length] = 0;
@@ -35,9 +35,9 @@ namespace Hjg.Pngcs.Chunks {
             for (i = 0; i < c.Data.Length; i++)
                 if (c.Data[i] == 0)
                     break;
-            key = Hjg.Pngcs.PngHelperInternal.charsetLatin1.GetString(c.Data, 0, i);
+            key = PngHelperInternal.charsetLatin1.GetString(c.Data, 0, i);
             i++;
-            val = i < c.Data.Length ? Hjg.Pngcs.PngHelperInternal.charsetLatin1.GetString(c.Data, i, c.Data.Length - i) : "";
+            val = i < c.Data.Length ? PngHelperInternal.charsetLatin1.GetString(c.Data, i, c.Data.Length - i) : "";
         }
 
         public override void CloneDataFromRead(PngChunk other) {

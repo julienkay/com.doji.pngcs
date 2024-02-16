@@ -38,7 +38,7 @@ namespace Hjg.Pngcs
                 buf = new int[nsamples];
             if (!line.SamplesUnpacked)
                 line = line.unpackToNewImageLine();
-            bool isbyte = line.SampleType == Hjg.Pngcs.ImageLine.ESampleType.BYTE;
+            bool isbyte = line.SampleType == ImageLine.ESampleType.BYTE;
             int nindexesWithAlpha = trns != null ? trns.GetPalletteAlpha().Length : 0;
             for (int c = 0; c < line.ImgInfo.Cols; c++)
             {

@@ -31,28 +31,28 @@ namespace Hjg.Pngcs.Chunks {
             ChunkRaw c = null;
             if (ImgInfo.Greyscale) {
                 c = createEmptyChunk(2, true);
-                Hjg.Pngcs.PngHelperInternal.WriteInt2tobytes(gray, c.Data, 0);
+                PngHelperInternal.WriteInt2tobytes(gray, c.Data, 0);
             } else if (ImgInfo.Indexed) {
                 c = createEmptyChunk(1, true);
                 c.Data[0] = (byte)paletteIndex;
             } else {
                 c = createEmptyChunk(6, true);
                 PngHelperInternal.WriteInt2tobytes(red, c.Data, 0);
-                Hjg.Pngcs.PngHelperInternal.WriteInt2tobytes(green, c.Data, 0);
-                Hjg.Pngcs.PngHelperInternal.WriteInt2tobytes(blue, c.Data, 0);
+                PngHelperInternal.WriteInt2tobytes(green, c.Data, 0);
+                PngHelperInternal.WriteInt2tobytes(blue, c.Data, 0);
             }
             return c;
         }
 
         public override void ParseFromRaw(ChunkRaw c) {
             if (ImgInfo.Greyscale) {
-                gray = Hjg.Pngcs.PngHelperInternal.ReadInt2fromBytes(c.Data, 0);
+                gray = PngHelperInternal.ReadInt2fromBytes(c.Data, 0);
             } else if (ImgInfo.Indexed) {
                 paletteIndex = (int)(c.Data[0] & 0xff);
             } else {
-                red = Hjg.Pngcs.PngHelperInternal.ReadInt2fromBytes(c.Data, 0);
-                green = Hjg.Pngcs.PngHelperInternal.ReadInt2fromBytes(c.Data, 2);
-                blue = Hjg.Pngcs.PngHelperInternal.ReadInt2fromBytes(c.Data, 4);
+                red = PngHelperInternal.ReadInt2fromBytes(c.Data, 0);
+                green = PngHelperInternal.ReadInt2fromBytes(c.Data, 2);
+                blue = PngHelperInternal.ReadInt2fromBytes(c.Data, 4);
             }
         }
 

@@ -169,7 +169,7 @@ namespace Hjg.Pngcs {
             this.MaxTotalBytesRead = 200 * 1024 * 1024; // 200MB
             this.SkipChunkMaxSize = 2 * 1024 * 1024;
             this.SkipChunkIds = new string[] { "fdAT" };
-            this.ChunkLoadBehaviour = Hjg.Pngcs.Chunks.ChunkLoadBehaviour.LOAD_CHUNK_ALWAYS;
+            this.ChunkLoadBehaviour = ChunkLoadBehaviour.LOAD_CHUNK_ALWAYS;
             // starts reading: signature
             byte[] pngid = new byte[8];
             PngHelperInternal.ReadBytes(inputStream, pngid, 0, pngid.Length);
@@ -247,19 +247,19 @@ namespace Hjg.Pngcs {
             int ftn = rowbfilter[0];
             FilterType ft = (FilterType)ftn;
             switch (ft) {
-                case Hjg.Pngcs.FilterType.FILTER_NONE:
+                case FilterType.FILTER_NONE:
                     UnfilterRowNone(nbytes);
                     break;
-                case Hjg.Pngcs.FilterType.FILTER_SUB:
+                case FilterType.FILTER_SUB:
                     UnfilterRowSub(nbytes);
                     break;
-                case Hjg.Pngcs.FilterType.FILTER_UP:
+                case FilterType.FILTER_UP:
                     UnfilterRowUp(nbytes);
                     break;
-                case Hjg.Pngcs.FilterType.FILTER_AVERAGE:
+                case FilterType.FILTER_AVERAGE:
                     UnfilterRowAverage(nbytes);
                     break;
-                case Hjg.Pngcs.FilterType.FILTER_PAETH:
+                case FilterType.FILTER_PAETH:
                     UnfilterRowPaeth(nbytes);
                     break;
                 default:
@@ -331,13 +331,13 @@ namespace Hjg.Pngcs {
                     break;
                 PngHelperInternal.ReadBytes(inputStream, chunkid, 0, 4);
                 offset += 4;
-                if (PngCsUtils.arraysEqual4(chunkid, Hjg.Pngcs.Chunks.ChunkHelper.b_IDAT)) {
+                if (PngCsUtils.arraysEqual4(chunkid, ChunkHelper.b_IDAT)) {
                     found = true;
                     this.CurrentChunkGroup = ChunksList.CHUNK_GROUP_4_IDAT;
                     // add dummy idat chunk to list
                     chunksList.AppendReadChunk(new PngChunkIDAT(ImgInfo, clen, offset - 8), CurrentChunkGroup);
                     break;
-                } else if (PngCsUtils.arraysEqual4(chunkid, Hjg.Pngcs.Chunks.ChunkHelper.b_IEND)) {
+                } else if (PngCsUtils.arraysEqual4(chunkid, ChunkHelper.b_IEND)) {
                     throw new PngjInputException("END chunk found before image data (IDAT) at offset=" + offset);
                 }
                 string chunkids = ChunkHelper.ToString(chunkid);

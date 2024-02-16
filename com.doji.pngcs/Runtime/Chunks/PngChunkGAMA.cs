@@ -27,14 +27,14 @@ namespace Hjg.Pngcs.Chunks {
         public override ChunkRaw CreateRawChunk() {
             ChunkRaw c = createEmptyChunk(4, true);
             int g = (int)(gamma * 100000 + 0.5d);
-            Hjg.Pngcs.PngHelperInternal.WriteInt4tobytes(g, c.Data, 0);
+            PngHelperInternal.WriteInt4tobytes(g, c.Data, 0);
             return c;
         }
 
         public override void ParseFromRaw(ChunkRaw chunk) {
             if (chunk.Len != 4)
                 throw new PngjException("bad chunk " + chunk);
-            int g = Hjg.Pngcs.PngHelperInternal.ReadInt4fromBytes(chunk.Data, 0);
+            int g = PngHelperInternal.ReadInt4fromBytes(chunk.Data, 0);
             gamma = ((double)g) / 100000.0d;
         }
 

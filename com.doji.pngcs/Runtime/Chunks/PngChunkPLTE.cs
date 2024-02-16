@@ -57,7 +57,7 @@ namespace Hjg.Pngcs.Chunks {
         public override void CloneDataFromRead(PngChunk other) {
             PngChunkPLTE otherx = (PngChunkPLTE)other;
             this.SetNentries(otherx.GetNentries());
-            System.Array.Copy((Array)(otherx.entries), 0, (Array)(entries), 0, nentries);
+            Array.Copy((Array)(otherx.entries), 0, (Array)(entries), 0, nentries);
         }
 
         /// <summary>

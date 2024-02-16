@@ -20,7 +20,7 @@ namespace Hjg.Pngcs.Chunks {
 
         private PngChunkUNKNOWN(PngChunkUNKNOWN c, ImageInfo info)
             : base(c.Id, info) {
-            System.Array.Copy(c.data, 0, data, 0, c.data.Length);
+            Array.Copy(c.data, 0, data, 0, c.data.Length);
         }
 
         public override ChunkOrderingConstraint GetOrderingConstraint() {

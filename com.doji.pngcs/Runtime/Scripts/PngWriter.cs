@@ -135,7 +135,7 @@ namespace Hjg.Pngcs {
         /// </summary>
         private void init() {
             datStream = new PngIDatChunkOutputStream(outputStream, IdatMaxSize);
-            datStreamDeflated = ZlibStreamFactory.createZlibOutputStream(datStream, CompLevel, CompressionStrategy, true);
+            datStreamDeflated = new ZlibOutputStreamIs(datStream, CompLevel, CompressionStrategy, true);
             WriteSignatureAndIHDR();
             WriteFirstChunks();
         }

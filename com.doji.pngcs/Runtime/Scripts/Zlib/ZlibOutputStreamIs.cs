@@ -1,12 +1,8 @@
 ﻿using System.IO;
-
-#if SHARPZIPLIB
 using Unity.SharpZipLib.Zip.Compression;
 using Unity.SharpZipLib.Zip.Compression.Streams;
-// ONLY IF SHARPZIPLIB IS AVAILABLE
 
 namespace Hjg.Pngcs.Zlib {
-
 
     /// <summary>
     /// Zlib output (deflater) based on ShaprZipLib
@@ -40,7 +36,6 @@ namespace Hjg.Pngcs.Zlib {
             ost.WriteByte(value);
         }
 
-
         public override void Close() {
             ost.Close();
         }
@@ -55,5 +50,3 @@ namespace Hjg.Pngcs.Zlib {
         }
     }
 }
-
-#endif

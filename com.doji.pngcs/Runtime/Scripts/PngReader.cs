@@ -351,7 +351,7 @@ namespace Hjg.Pngcs {
             if (idatLen < 0)
                 throw new PngjInputException("first idat chunk not found!");
             iIdatCstream = new PngIDatChunkInputStream(inputStream, idatLen, offset);
-            idatIstream = ZlibStreamFactory.createZlibInputStream(iIdatCstream, true);
+            idatIstream = new ZlibInputStreamIs(iIdatCstream, true);
             if (!crcEnabled)
                 iIdatCstream.DisableCrcCheck();
         }

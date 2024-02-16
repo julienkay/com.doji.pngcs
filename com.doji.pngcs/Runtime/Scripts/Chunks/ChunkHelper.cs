@@ -182,11 +182,11 @@ namespace Hjg.Pngcs.Chunks {
                 MemoryStream inb = new MemoryStream(ori, offset, len);
                 Stream inx = inb;
                 if (!compress)
-                    inx = ZlibStreamFactory.createZlibInputStream(inb);
+                    inx = new ZlibInputStreamIs(inb, false);
                 MemoryStream outb = new MemoryStream();
                 Stream outx = outb;
                 if (compress)
-                    outx = ZlibStreamFactory.createZlibOutputStream(outb);
+                    outx = new ZlibOutputStreamIs(outb, DeflateCompressLevel.DEFAULT, EDeflateCompressStrategy.Default, false);
                 shovelInToOut(inx, outx);
                 inx.Close();
                 outx.Close();

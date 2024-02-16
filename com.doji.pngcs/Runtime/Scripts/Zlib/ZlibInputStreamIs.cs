@@ -1,12 +1,7 @@
 ﻿using System.IO;
-
-#if SHARPZIPLIB
-
 using Unity.SharpZipLib.Zip.Compression.Streams;
-// ONLY IF SHARPZIPLIB IS AVAILABLE
 
 namespace Hjg.Pngcs.Zlib {
-
 
     /// <summary>
     /// Zip input (inflater) based on ShaprZipLib
@@ -33,7 +28,6 @@ namespace Hjg.Pngcs.Zlib {
             ist.Close();
         }
 
-
         public override void Flush() {
             ist.Flush();
         }
@@ -43,5 +37,3 @@ namespace Hjg.Pngcs.Zlib {
         }
     }
 }
-
-#endif

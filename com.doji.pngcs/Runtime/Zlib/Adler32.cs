@@ -5,8 +5,8 @@ using System.Text;
 namespace Hjg.Pngcs.Zlib {
 
     public class Adler32 {
-        private UInt32 a = 1;
-        private UInt32 b = 0;
+        private uint a = 1;
+        private uint b = 0;
         private const int _base = 65521; /* largest prime smaller than 65536 */
         private const int _nmax = 5550;
         private int pend = 0; // how many bytes have I read witouth computing modulus
@@ -50,7 +50,7 @@ namespace Hjg.Pngcs.Zlib {
             pend = 0;
         }
 
-        public UInt32 GetValue() {
+        public uint GetValue() {
             if (pend > 0) updateModulus();
             return (b << 16) | a;
         }

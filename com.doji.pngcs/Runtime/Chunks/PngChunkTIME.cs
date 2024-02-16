@@ -12,7 +12,7 @@ namespace Hjg.Pngcs.Chunks {
     /// tIME chunk: http://www.w3.org/TR/PNG/#11tIME
     /// </summary>
     public class PngChunkTIME : PngChunkSingle {
-        public const String ID = ChunkHelper.tIME;
+        public const string ID = ChunkHelper.tIME;
     
         private int year, mon, day, hour, min, sec;
 
@@ -80,8 +80,8 @@ namespace Hjg.Pngcs.Chunks {
         }
 
         /** format YYYY/MM/DD HH:mm:SS */
-        public String GetAsString() {
-            return String.Format("%04d/%02d/%02d %02d:%02d:%02d", year, mon, day, hour, min, sec);
+        public string GetAsString() {
+            return string.Format("%04d/%02d/%02d %02d:%02d:%02d", year, mon, day, hour, min, sec);
         }
 
     }

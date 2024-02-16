@@ -1,11 +1,9 @@
-namespace Hjg.Pngcs {
+using Hjg.Pngcs.Zlib;
+using System;
+using System.IO;
+using System.Text;
 
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.IO;
-    using System.Text;
-    using Hjg.Pngcs.Zlib;
+namespace Hjg.Pngcs {
 
     /// <summary>
     /// Some utility static methods for internal use.
@@ -201,7 +199,7 @@ namespace Hjg.Pngcs {
         }
 
 
-        public static void Logdebug(String msg) {
+        public static void Logdebug(string msg) {
             if (DEBUG)
                 System.Console.Out.WriteLine(msg);
         }

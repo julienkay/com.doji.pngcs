@@ -79,7 +79,7 @@ namespace Hjg.Pngcs {
                 if (rown == 0)
                     currentType = FilterType.FILTER_SUB;
                 else {
-                    double bestval = Double.MaxValue;
+                    double bestval = double.MaxValue;
                     double val;
                     for (int i = 0; i < 5; i++) {
                         val = useEntropy ? lastEntropies[i] : lastSums[i];

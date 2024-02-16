@@ -1,10 +1,9 @@
-namespace Hjg.Pngcs {
+using Hjg.Pngcs.Zlib;
+using System;
+using System.Collections.Generic;
+using System.IO;
 
-    using System;
-    using System.Collections;
-    using System.Collections.Generic;
-    using System.IO;
-    using Hjg.Pngcs.Zlib;
+namespace Hjg.Pngcs {
 
     /// <summary>
     /// Reads IDAT chunks

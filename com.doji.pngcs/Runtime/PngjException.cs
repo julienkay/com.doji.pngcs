@@ -14,11 +14,11 @@ namespace Hjg.Pngcs {
     public class PngjException : Exception {
         private const long serialVersionUID = 1L;
 
-        public PngjException(String message, Exception cause)
+        public PngjException(string message, Exception cause)
             : base(message, cause) {
         }
 
-        public PngjException(String message)
+        public PngjException(string message)
             : base(message) {
         }
 

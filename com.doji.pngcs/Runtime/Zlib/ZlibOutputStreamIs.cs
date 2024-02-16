@@ -5,8 +5,8 @@ using System.IO;
 using System.IO.Compression;
 
 #if SHARPZIPLIB
-using ICSharpCode.SharpZipLib.Zip.Compression;
-using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
+using Unity.SharpZipLib.Zip.Compression;
+using Unity.SharpZipLib.Zip.Compression.Streams;
 // ONLY IF SHARPZIPLIB IS AVAILABLE
 
 namespace Hjg.Pngcs.Zlib {
@@ -53,7 +53,7 @@ namespace Hjg.Pngcs.Zlib {
             ost.Flush();
         }
 
-        public override String getImplementationId() {
+        public override string getImplementationId() {
             return "Zlib deflater: SharpZipLib";
         }
     }

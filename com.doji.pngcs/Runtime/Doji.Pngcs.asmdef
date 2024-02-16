@@ -11,11 +11,6 @@
     "defineConstraints": [],
     "versionDefines": [
         {
-            "name": "com.doji.pngcs",
-            "expression": "",
-            "define": ""
-        },
-        {
             "name": "com.unity.sharp-zip-lib",
             "expression": "",
             "define": "SHARPZIPLIB"

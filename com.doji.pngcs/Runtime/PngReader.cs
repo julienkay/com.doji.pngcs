@@ -33,7 +33,7 @@ namespace Hjg.Pngcs {
         /// <summary>
         /// Basic image info, inmutable
         /// </summary>
-        public ImageInfo ImgInfo {get;private set;}
+        public ImageInfo ImgInfo { get; private set; }
 
         /// <summary>
         /// filename, or description - merely informative, can be empty
@@ -224,7 +224,7 @@ namespace Hjg.Pngcs {
             if (CurrentChunkGroup < ChunksList.CHUNK_GROUP_5_AFTERIDAT) {
                 try {
                     idatIstream.Close();
-                } catch (Exception ) { }
+                } catch (Exception) { }
                 ReadLastChunks();
             }
             Close();
@@ -234,7 +234,7 @@ namespace Hjg.Pngcs {
             if (CurrentChunkGroup < ChunksList.CHUNK_GROUP_6_END) { // this could only happen if forced close
                 try {
                     idatIstream.Close();
-                } catch (Exception ) {
+                } catch (Exception) {
                 }
                 CurrentChunkGroup = ChunksList.CHUNK_GROUP_6_END;
             }
@@ -400,12 +400,14 @@ namespace Hjg.Pngcs {
         /// </summary>
         /// <returns></returns>
         private PngChunk ReadChunk(byte[] chunkid, int clen, bool skipforced) {
-            if (clen < 0) throw new PngjInputException("invalid chunk lenght: " + clen);
+            if (clen < 0)
+                throw new PngjInputException("invalid chunk lenght: " + clen);
             // skipChunksByIdSet is created lazyly, if fist IHDR has already been read
             if (skipChunkIdsSet == null && CurrentChunkGroup > ChunksList.CHUNK_GROUP_0_IDHR) {
                 skipChunkIdsSet = new Dictionary<string, int>();
                 if (SkipChunkIds != null)
-                    foreach (string id in SkipChunkIds) skipChunkIdsSet.Add(id, 1);
+                    foreach (string id in SkipChunkIds)
+                        skipChunkIdsSet.Add(id, 1);
             }
 
             string chunkidstr = ChunkHelper.ToString(chunkid);

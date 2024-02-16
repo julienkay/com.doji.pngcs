@@ -8,7 +8,7 @@ namespace Hjg.Pngcs.Chunks {
     /// </summary>
     public class PngChunkTIME : PngChunkSingle {
         public const string ID = ChunkHelper.tIME;
-    
+
         private int year, mon, day, hour, min, sec;
 
         public PngChunkTIME(ImageInfo info)

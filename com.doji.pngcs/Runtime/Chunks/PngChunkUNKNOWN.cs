@@ -5,7 +5,7 @@ namespace Hjg.Pngcs.Chunks {
     /// <summary>
     /// Unknown (for our chunk factory) chunk type.
     /// </summary>
-    public class PngChunkUNKNOWN : PngChunkMultiple { 
+    public class PngChunkUNKNOWN : PngChunkMultiple {
 
         private byte[] data;
 

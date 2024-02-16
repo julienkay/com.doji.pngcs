@@ -1,5 +1,4 @@
 ﻿namespace Ar.Com.Hjg.Pngcs {
-    interface IBytesConsumer
-    {
+    interface IBytesConsumer {
     }
 }

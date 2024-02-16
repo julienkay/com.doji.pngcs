@@ -3,7 +3,7 @@
 namespace Hjg.Pngcs.Zlib {
 
 
-    public class ZlibStreamFactory {        
+    public class ZlibStreamFactory {
         public static AZlibInputStream createZlibInputStream(Stream st, bool leaveOpen) {
 #if NET45
                 return new ZlibInputStreamMs(st,leaveOpen);

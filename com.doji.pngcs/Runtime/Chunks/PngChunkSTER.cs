@@ -11,8 +11,8 @@ namespace Hjg.Pngcs.Chunks {
         /// <summary>
         /// 0: cross-fuse layout 1: diverging-fuse layout
         /// </summary>
-        public byte Mode { get; set; } 
-        
+        public byte Mode { get; set; }
+
         public PngChunkSTER(ImageInfo info)
             : base(ID, info) { }
 

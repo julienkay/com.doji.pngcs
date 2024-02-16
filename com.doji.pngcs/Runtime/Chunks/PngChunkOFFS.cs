@@ -46,7 +46,7 @@ namespace Hjg.Pngcs.Chunks {
             posY = otherx.posY;
             units = otherx.units;
         }
-        
+
         /// <summary>
         /// 0: pixel, 1:micrometer
         /// </summary>

@@ -9,7 +9,8 @@
 
 
         public void Update(byte data) {
-            if (pend >= _nmax) updateModulus();
+            if (pend >= _nmax)
+                updateModulus();
             a += data;
             b += a;
             pend++;
@@ -47,7 +48,8 @@
         }
 
         public uint GetValue() {
-            if (pend > 0) updateModulus();
+            if (pend > 0)
+                updateModulus();
             return (b << 16) | a;
         }
     }

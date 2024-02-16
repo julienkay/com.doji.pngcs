@@ -72,7 +72,8 @@ namespace Hjg.Pngcs.Chunks {
 
         private int GetLen() {
             int len = ImgInfo.Greyscale ? 1 : 3;
-            if (ImgInfo.Alpha) len += 1;
+            if (ImgInfo.Alpha)
+                len += 1;
             return len;
         }
     }

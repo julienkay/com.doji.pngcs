@@ -18,7 +18,8 @@ namespace Hjg.Pngcs {
         /// </summary>
         ///
         public static CRC32 GetCRC() {
-            if (crc32Engine == null) crc32Engine = new CRC32();
+            if (crc32Engine == null)
+                crc32Engine = new CRC32();
             return crc32Engine;
         }
 
@@ -205,18 +206,17 @@ namespace Hjg.Pngcs {
         }
 
 
-   	public static void InitCrcForTests(PngReader pngr) {
-		pngr.InitCrctest();
-	}
+        public static void InitCrcForTests(PngReader pngr) {
+            pngr.InitCrctest();
+        }
 
-	public static long GetCrctestVal(PngReader pngr) {
-		return pngr.GetCrctestVal();
-	}
+        public static long GetCrctestVal(PngReader pngr) {
+            return pngr.GetCrctestVal();
+        }
 
 
-    internal static void Log(string p, Exception e)
-    {
-        Console.Error.WriteLine(p);
-    }
+        internal static void Log(string p, Exception e) {
+            Console.Error.WriteLine(p);
+        }
     }
 }

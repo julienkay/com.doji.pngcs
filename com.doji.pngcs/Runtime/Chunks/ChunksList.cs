@@ -36,12 +36,12 @@ namespace Hjg.Pngcs.Chunks {
         public Dictionary<string, int> GetChunksKeys() {
             Dictionary<string, int> ck = new Dictionary<string, int>();
             foreach (PngChunk c in chunks) {
-                ck[c.Id] =  ck.ContainsKey(c.Id) ? ck[c.Id] + 1 : 1;
+                ck[c.Id] = ck.ContainsKey(c.Id) ? ck[c.Id] + 1 : 1;
             }
             return ck;
         }
 
-     
+
         /// <summary>
         /// Returns a copy of the chunk list (but the chunks are not copied) 
         /// </summary>
@@ -123,7 +123,7 @@ namespace Hjg.Pngcs.Chunks {
                 throw new PngjException("unexpected multiple chunks id=" + id);
             return list[list.Count - 1];
         }
-            
+
         /// <summary>
         /// Finds all chunks "equivalent" to this one
         /// </summary>

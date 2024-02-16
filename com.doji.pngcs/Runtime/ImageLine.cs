@@ -301,18 +301,26 @@ namespace Hjg.Pngcs {
         }
 
         internal static int GetMaskForPackedFormats(int bitDepth) { // Utility function for pack/unpack
-            if (bitDepth == 4) return 0xf0;
-            else if (bitDepth == 2) return 0xc0;
-            else if (bitDepth == 1) return 0x80;
-            else return 0xff;
+            if (bitDepth == 4)
+                return 0xf0;
+            else if (bitDepth == 2)
+                return 0xc0;
+            else if (bitDepth == 1)
+                return 0x80;
+            else
+                return 0xff;
 
         }
 
         internal static int GetMaskForPackedFormatsLs(int bitDepth) { // Utility function for pack/unpack
-            if (bitDepth == 4) return 0x0f;
-            else if (bitDepth == 2) return 0x03;
-            else if (bitDepth == 1) return 0x01;
-            else return 0xff;
+            if (bitDepth == 4)
+                return 0x0f;
+            else if (bitDepth == 2)
+                return 0x03;
+            else if (bitDepth == 1)
+                return 0x01;
+            else
+                return 0xff;
         }
 
     }

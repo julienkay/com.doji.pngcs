@@ -6,7 +6,7 @@ namespace Hjg.Pngcs.Chunks {
     /// </summary>
     public class PngChunkIEND : PngChunkSingle {
         public const string ID = ChunkHelper.IEND;
-     
+
         public PngChunkIEND(ImageInfo info)
             : base(ID, info) {
         }

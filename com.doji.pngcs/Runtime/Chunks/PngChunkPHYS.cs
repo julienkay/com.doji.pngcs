@@ -85,6 +85,6 @@ namespace Hjg.Pngcs.Chunks {
             PixelsxUnitY = (long)(dpiy / 0.0254 + 0.5);
         }
 
-     
+
     }
 }

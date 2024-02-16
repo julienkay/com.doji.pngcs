@@ -181,10 +181,12 @@ namespace Hjg.Pngcs.Chunks {
             try {
                 MemoryStream inb = new MemoryStream(ori, offset, len);
                 Stream inx = inb;
-                if (!compress) inx = ZlibStreamFactory.createZlibInputStream(inb);
+                if (!compress)
+                    inx = ZlibStreamFactory.createZlibInputStream(inb);
                 MemoryStream outb = new MemoryStream();
                 Stream outx = outb;
-                if (compress) outx = ZlibStreamFactory.createZlibOutputStream(outb);
+                if (compress)
+                    outx = ZlibStreamFactory.createZlibOutputStream(outb);
                 shovelInToOut(inx, outx);
                 inx.Close();
                 outx.Close();
@@ -277,9 +279,9 @@ namespace Hjg.Pngcs.Chunks {
             return false;
         }
 
-	public static bool IsText(PngChunk c) {
-		return c is PngChunkTextVar;
-	}
+        public static bool IsText(PngChunk c) {
+            return c is PngChunkTextVar;
+        }
 
     }
 }

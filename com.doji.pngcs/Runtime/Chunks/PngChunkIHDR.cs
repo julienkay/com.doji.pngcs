@@ -8,7 +8,7 @@ namespace Hjg.Pngcs.Chunks {
     /// </summary>
     public class PngChunkIHDR : PngChunkSingle {
         public const string ID = ChunkHelper.IHDR;
-        public int Cols {get;set;}
+        public int Cols { get; set; }
         public int Rows { get; set; }
         public int Bitspc { get; set; }
         public int Colormodel { get; set; }

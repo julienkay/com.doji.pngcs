@@ -30,7 +30,7 @@ namespace Hjg.Pngcs.Chunks {
         /// </summary>
         public byte[] Data;
         private int crcval;
-        private long offset=0;
+        private long offset = 0;
 
         /// <summary>
         /// Creates an empty raw chunk
@@ -45,9 +45,7 @@ namespace Hjg.Pngcs.Chunks {
                 AllocData();
         }
 
-        internal ChunkRaw(int length, byte[] idbytes, bool alloc) : this(length,ChunkHelper.ToString(idbytes), alloc)
-        {
-        }
+        internal ChunkRaw(int length, byte[] idbytes, bool alloc) : this(length, ChunkHelper.ToString(idbytes), alloc) { }
 
         /// <summary>
         /// Called after setting data, before writing to os

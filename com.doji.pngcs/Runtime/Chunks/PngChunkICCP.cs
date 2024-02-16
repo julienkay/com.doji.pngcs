@@ -8,9 +8,9 @@ namespace Hjg.Pngcs.Chunks {
     /// </summary>
     public class PngChunkICCP : PngChunkSingle {
         public const string ID = ChunkHelper.iCCP;
-        
+
         private string profileName;
-        
+
         private byte[] compressedProfile;
 
         public PngChunkICCP(ImageInfo info)
@@ -68,7 +68,7 @@ namespace Hjg.Pngcs.Chunks {
             profileName = name;
             compressedProfile = ChunkHelper.compressBytes(profile, true);
         }
-            
+
 
         public string GetProfileName() {
             return profileName;

@@ -12,7 +12,7 @@ namespace Hjg.Pngcs.Chunks {
         public const string ID = ChunkHelper.PLTE;
 
         private int nentries = 0;
-        
+
         /// <summary>
         /// 
         /// </summary>
@@ -85,7 +85,7 @@ namespace Hjg.Pngcs.Chunks {
             return entries[n];
         }
 
-       
+
         /// <summary>
         /// Gets n'th entry, filling 3 positions of given array, at given offset
         /// </summary>
@@ -94,7 +94,7 @@ namespace Hjg.Pngcs.Chunks {
         /// <param name="offset"></param>
         public void GetEntryRgb(int index, int[] rgb, int offset) {
             int v = entries[index];
-            rgb[offset ] = ((v & 0xff0000) >> 16);
+            rgb[offset] = ((v & 0xff0000) >> 16);
             rgb[offset + 1] = ((v & 0xff00) >> 8);
             rgb[offset + 2] = (v & 0xff);
         }

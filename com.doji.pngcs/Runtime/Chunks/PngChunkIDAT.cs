@@ -9,7 +9,7 @@ namespace Hjg.Pngcs.Chunks {
     public class PngChunkIDAT : PngChunkMultiple {
         public const string ID = ChunkHelper.IDAT;
 
-        public PngChunkIDAT(ImageInfo i,int len, long offset)
+        public PngChunkIDAT(ImageInfo i, int len, long offset)
             : base(ID, i) {
             Length = len;
             Offset = offset;

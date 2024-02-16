@@ -16,8 +16,8 @@ namespace Hjg.Pngcs.Zlib {
         private DeflaterOutputStream ost;
         private Deflater deflater;
         public ZlibOutputStreamIs(Stream st, int compressLevel, EDeflateCompressStrategy strat, bool leaveOpen)
-            : base(st,compressLevel,strat,leaveOpen) {
-                deflater=new Deflater(compressLevel);
+            : base(st, compressLevel, strat, leaveOpen) {
+            deflater = new Deflater(compressLevel);
             setStrat(strat);
             ost = new DeflaterOutputStream(st, deflater);
             ost.IsStreamOwner = !leaveOpen;
@@ -28,7 +28,8 @@ namespace Hjg.Pngcs.Zlib {
                 deflater.SetStrategy(DeflateStrategy.Filtered);
             else if (strat == EDeflateCompressStrategy.Huffman)
                 deflater.SetStrategy(DeflateStrategy.HuffmanOnly);
-            else deflater.SetStrategy(DeflateStrategy.Default);
+            else
+                deflater.SetStrategy(DeflateStrategy.Default);
         }
 
         public override void Write(byte[] buffer, int offset, int count) {
@@ -39,7 +40,7 @@ namespace Hjg.Pngcs.Zlib {
             ost.WriteByte(value);
         }
 
- 
+
         public override void Close() {
             ost.Close();
         }

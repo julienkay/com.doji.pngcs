@@ -257,7 +257,7 @@ namespace Hjg.Pngcs {
                 } else { // 16 bitspc
                     foreach (int x in row) { // optimized
                         rowb[j++] = (byte)(x >> 8);
-                        rowb[j++] = (byte)(x); 
+                        rowb[j++] = (byte)(x);
                     }
                 }
             } else {
@@ -395,7 +395,8 @@ namespace Hjg.Pngcs {
         ///
         private void CopyChunks(PngReader reader, int copy_mask, bool onlyAfterIdat) {
             bool idatDone = CurrentChunkGroup >= ChunksList.CHUNK_GROUP_4_IDAT;
-            if (onlyAfterIdat && reader.CurrentChunkGroup < ChunksList.CHUNK_GROUP_6_END) throw new PngjException("tried to copy last chunks but reader has not ended");
+            if (onlyAfterIdat && reader.CurrentChunkGroup < ChunksList.CHUNK_GROUP_6_END)
+                throw new PngjException("tried to copy last chunks but reader has not ended");
             foreach (PngChunk chunk in reader.GetChunksList().GetChunks()) {
                 int group = chunk.ChunkGroup;
                 if (group < ChunksList.CHUNK_GROUP_4_IDAT && idatDone)

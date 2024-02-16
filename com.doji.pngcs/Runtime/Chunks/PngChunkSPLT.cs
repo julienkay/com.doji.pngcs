@@ -24,7 +24,7 @@ namespace Hjg.Pngcs.Chunks {
 
         public PngChunkSPLT(ImageInfo info)
             : base(ID, info) {
-                PalName = "";
+            PalName = "";
         }
 
 

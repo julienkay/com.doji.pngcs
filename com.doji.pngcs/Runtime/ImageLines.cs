@@ -8,7 +8,7 @@
     /// </summary>
     public class ImageLines {
 
-        public ImageInfo ImgInfo {get; private set;}
+        public ImageInfo ImgInfo { get; private set; }
         public ImageLine.ESampleType sampleType { get; private set; }
         public bool SamplesUnpacked { get; private set; }
         public int RowOffset { get; private set; }
@@ -32,11 +32,13 @@
             elementsPerRow = unpackedMode ? ImgInfo.SamplesPerRow : ImgInfo.SamplesPerRowPacked;
             if (sampleType == ImageLine.ESampleType.INT) {
                 Scanlines = new int[nRows][];
-                for (int i = 0; i < nRows; i++) Scanlines[i] = new int[elementsPerRow];
+                for (int i = 0; i < nRows; i++)
+                    Scanlines[i] = new int[elementsPerRow];
                 ScanlinesB = null;
             } else if (sampleType == ImageLine.ESampleType.BYTE) {
                 ScanlinesB = new byte[nRows][];
-                for (int i = 0; i < nRows; i++) ScanlinesB[i] = new byte[elementsPerRow];
+                for (int i = 0; i < nRows; i++)
+                    ScanlinesB[i] = new byte[elementsPerRow];
                 Scanlines = null;
             } else
                 throw new PngjExceptionInternal("bad ImageLine initialization");

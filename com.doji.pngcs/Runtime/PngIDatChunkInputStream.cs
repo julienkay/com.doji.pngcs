@@ -129,9 +129,11 @@ namespace Hjg.Pngcs {
         public override int Read(byte[] b, int off, int len_0) {
             if (ended)
                 return -1; // can happen only when raw reading, see Pngreader.readAndSkipsAllRows()
-            if (toReadThisChunk == 0) throw new Exception("this should not happen");
+            if (toReadThisChunk == 0)
+                throw new Exception("this should not happen");
             int n = inputStream.Read(b, off, (len_0 >= toReadThisChunk) ? toReadThisChunk : len_0);
-            if (n == -1) n = -2;
+            if (n == -1)
+                n = -2;
             if (n > 0) {
                 if (checkCrc)
                     crcEngine.Update(b, off, n);

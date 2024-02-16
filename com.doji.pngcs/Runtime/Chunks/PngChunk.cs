@@ -64,7 +64,7 @@ namespace Hjg.Pngcs.Chunks {
             /// <summary>
             /// Before IDAT (before or after PLTE)
             /// </summary>
-            BEFORE_IDAT, 
+            BEFORE_IDAT,
             /// <summary>
             /// Does not apply
             /// </summary>
@@ -159,10 +159,12 @@ namespace Hjg.Pngcs.Chunks {
         /// <returns></returns>
         internal static PngChunk FactoryFromId(string cid, ImageInfo info) {
             PngChunk chunk = null;
-            if (factoryMap == null) initFactory();
+            if (factoryMap == null)
+                initFactory();
             if (isKnown(cid)) {
                 Type t = factoryMap[cid];
-                if (t == null) Console.Error.WriteLine("What?? " + cid);
+                if (t == null)
+                    Console.Error.WriteLine("What?? " + cid);
                 System.Reflection.ConstructorInfo cons = t.GetConstructor(new Type[] { typeof(ImageInfo) });
                 object o = cons.Invoke(new object[] { info });
                 chunk = (PngChunk)o;
@@ -199,7 +201,7 @@ namespace Hjg.Pngcs.Chunks {
         /// </summary>
         /// <returns></returns>
         public override string ToString() {
-            return "chunk id= " + Id + " (len=" + Length + " off=" + Offset +") c=" + GetType().Name;
+            return "chunk id= " + Id + " (len=" + Length + " off=" + Offset + ") c=" + GetType().Name;
         }
 
         /// <summary>

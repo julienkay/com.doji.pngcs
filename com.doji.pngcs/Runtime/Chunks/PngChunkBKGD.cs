@@ -7,7 +7,7 @@ namespace Hjg.Pngcs.Chunks {
     /// </summary>
     public class PngChunkBKGD : PngChunkSingle {
         public const string ID = ChunkHelper.bKGD;
-        
+
         // this chunk structure depends on the image type
         // only one of these is meaningful
         private int gray;

@@ -25,8 +25,8 @@ namespace Hjg.Pngcs.Chunks {
         internal readonly ImageInfo imageInfo; // only required for writing
 
         internal ChunksList(ImageInfo imfinfo) {
-            this.chunks = new List<PngChunk>();
-            this.imageInfo = imfinfo;
+            chunks = new List<PngChunk>();
+            imageInfo = imfinfo;
         }
 
         /// <summary>

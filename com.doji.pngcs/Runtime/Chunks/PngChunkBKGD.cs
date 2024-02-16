@@ -85,7 +85,7 @@ namespace Hjg.Pngcs.Chunks {
         public void SetPaletteIndex(int index) {
             if (!ImgInfo.Indexed)
                 throw new PngjException("only indexed (pallete) images support this");
-            this.paletteIndex = index;
+            paletteIndex = index;
         }
 
         /// <summary>

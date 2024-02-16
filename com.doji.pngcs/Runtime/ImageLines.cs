@@ -25,10 +25,10 @@
             channels = ImgInfo.Channels;
             bitDepth = ImgInfo.BitDepth;
             this.sampleType = sampleType;
-            this.SamplesUnpacked = unpackedMode || !ImgInfo.Packed;
-            this.RowOffset = rowOffset;
-            this.Nrows = nRows;
-            this.RowStep = rowStep;
+            SamplesUnpacked = unpackedMode || !ImgInfo.Packed;
+            RowOffset = rowOffset;
+            Nrows = nRows;
+            RowStep = rowStep;
             elementsPerRow = unpackedMode ? ImgInfo.SamplesPerRow : ImgInfo.SamplesPerRowPacked;
             if (sampleType == ImageLine.ESampleType.INT) {
                 Scanlines = new int[nRows][];

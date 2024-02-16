@@ -20,7 +20,7 @@ namespace Hjg.Pngcs.Chunks {
 
         public PngChunkPLTE(ImageInfo info)
             : base(ID, info) {
-            this.nentries = 0;
+            nentries = 0;
         }
 
 
@@ -51,7 +51,7 @@ namespace Hjg.Pngcs.Chunks {
 
         public override void CloneDataFromRead(PngChunk other) {
             PngChunkPLTE otherx = (PngChunkPLTE)other;
-            this.SetNentries(otherx.GetNentries());
+            SetNentries(otherx.GetNentries());
             Array.Copy((Array)(otherx.entries), 0, (Array)(entries), 0, nentries);
         }
 

@@ -45,7 +45,7 @@ namespace Hjg.Pngcs.Chunks {
         public override void CloneDataFromRead(PngChunk other) {
             PngChunkHIST otherx = (PngChunkHIST)other;
             hist = new int[otherx.hist.Length];
-            Array.Copy((Array)(otherx.hist), 0, (Array)(this.hist), 0, otherx.hist.Length);
+            Array.Copy((Array)(otherx.hist), 0, (Array)(hist), 0, otherx.hist.Length);
         }
 
         public int[] GetHist() {

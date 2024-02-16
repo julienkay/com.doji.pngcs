@@ -77,15 +77,15 @@ namespace Hjg.Pngcs.Chunks {
         /// <param name="id"></param>
         /// <param name="imgInfo"></param>
         protected PngChunk(string id, ImageInfo imgInfo) {
-            this.Id = id;
-            this.ImgInfo = imgInfo;
-            this.Crit = ChunkHelper.IsCritical(id);
-            this.Pub = ChunkHelper.IsPublic(id);
-            this.Safe = ChunkHelper.IsSafeToCopy(id);
-            this.Priority = false;
-            this.ChunkGroup = -1;
-            this.Length = -1;
-            this.Offset = 0;
+            Id = id;
+            ImgInfo = imgInfo;
+            Crit = ChunkHelper.IsCritical(id);
+            Pub = ChunkHelper.IsPublic(id);
+            Safe = ChunkHelper.IsSafeToCopy(id);
+            Priority = false;
+            ChunkGroup = -1;
+            Length = -1;
+            Offset = 0;
         }
 
         private static Dictionary<string, Type> factoryMap = initFactory();

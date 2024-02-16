@@ -18,8 +18,8 @@ namespace Hjg.Pngcs.Chunks {
 
         internal ChunksListForWrite(ImageInfo info)
             : base(info) {
-            this.queuedChunks = new List<PngChunk>();
-            this.alreadyWrittenKeys = new Dictionary<string, int>();
+            queuedChunks = new List<PngChunk>();
+            alreadyWrittenKeys = new Dictionary<string, int>();
         }
 
         /// <summary>

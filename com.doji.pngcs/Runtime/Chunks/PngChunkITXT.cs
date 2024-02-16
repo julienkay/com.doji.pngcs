@@ -94,7 +94,7 @@ namespace Hjg.Pngcs.Chunks {
         }
 
         public void SetLangtag(string langtag) {
-            this.langTag = langtag;
+            langTag = langtag;
         }
 
         public string GetTranslatedTag() {

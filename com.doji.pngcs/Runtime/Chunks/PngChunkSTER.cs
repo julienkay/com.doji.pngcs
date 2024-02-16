@@ -35,7 +35,7 @@ namespace Hjg.Pngcs.Chunks {
 
         public override void CloneDataFromRead(PngChunk other) {
             PngChunkSTER otherx = (PngChunkSTER)other;
-            this.Mode = otherx.Mode;
+            Mode = otherx.Mode;
         }
     }
 }

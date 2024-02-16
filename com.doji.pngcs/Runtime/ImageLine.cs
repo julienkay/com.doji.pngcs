@@ -95,13 +95,13 @@ namespace Hjg.Pngcs {
         }
 
         internal ImageLine(ImageInfo imgInfo, ESampleType stype, bool unpackedMode, int[] sci, byte[] scb) {
-            this.ImgInfo = imgInfo;
+            ImgInfo = imgInfo;
             channels = imgInfo.Channels;
-            this.bitDepth = imgInfo.BitDepth;
-            this.FilterUsed = FilterType.FILTER_UNKNOWN;
-            this.SampleType = stype;
-            this.SamplesUnpacked = unpackedMode || !imgInfo.Packed;
-            ElementsPerRow = this.SamplesUnpacked ? imgInfo.SamplesPerRow
+            bitDepth = imgInfo.BitDepth;
+            FilterUsed = FilterType.FILTER_UNKNOWN;
+            SampleType = stype;
+            SamplesUnpacked = unpackedMode || !imgInfo.Packed;
+            ElementsPerRow = SamplesUnpacked ? imgInfo.SamplesPerRow
                 : imgInfo.SamplesPerRowPacked;
             if (stype == ESampleType.INT) {
                 Scanline = sci != null ? sci : new int[ElementsPerRow];
@@ -113,7 +113,7 @@ namespace Hjg.Pngcs {
                 maxSampleVal = bitDepth == 16 ? 0xFF : GetMaskForPackedFormatsLs(bitDepth);
             } else
                 throw new PngjExceptionInternal("bad ImageLine initialization");
-            this.Rown = -1;
+            Rown = -1;
         }
 
         static internal void unpackInplaceInt(ImageInfo iminfo, int[] src, int[] dst,

@@ -159,17 +159,17 @@ namespace Hjg.Pngcs {
         public PngReader(Stream inputStream, string filename) {
             this.filename = (filename == null) ? "" : filename;
             this.inputStream = inputStream;
-            this.chunksList = new ChunksList(null);
-            this.metadata = new PngMetadata(chunksList);
-            this.offset = 0;
+            chunksList = new ChunksList(null);
+            metadata = new PngMetadata(chunksList);
+            offset = 0;
             // set default options
-            this.CurrentChunkGroup = -1;
-            this.ShouldCloseStream = true;
-            this.MaxBytesMetadata = 5 * 1024 * 1024;
-            this.MaxTotalBytesRead = 200 * 1024 * 1024; // 200MB
-            this.SkipChunkMaxSize = 2 * 1024 * 1024;
-            this.SkipChunkIds = new string[] { "fdAT" };
-            this.ChunkLoadBehaviour = ChunkLoadBehaviour.LOAD_CHUNK_ALWAYS;
+            CurrentChunkGroup = -1;
+            ShouldCloseStream = true;
+            MaxBytesMetadata = 5 * 1024 * 1024;
+            MaxTotalBytesRead = 200 * 1024 * 1024; // 200MB
+            SkipChunkMaxSize = 2 * 1024 * 1024;
+            SkipChunkIds = new string[] { "fdAT" };
+            ChunkLoadBehaviour = ChunkLoadBehaviour.LOAD_CHUNK_ALWAYS;
             // starts reading: signature
             byte[] pngid = new byte[8];
             PngHelperInternal.ReadBytes(inputStream, pngid, 0, pngid.Length);
@@ -323,7 +323,7 @@ namespace Hjg.Pngcs {
             int clen = 0;
             bool found = false;
             byte[] chunkid = new byte[4]; // it's important to reallocate in each
-            this.CurrentChunkGroup = ChunksList.CHUNK_GROUP_1_AFTERIDHR;
+            CurrentChunkGroup = ChunksList.CHUNK_GROUP_1_AFTERIDHR;
             while (!found) {
                 clen = PngHelperInternal.ReadInt4(inputStream);
                 offset += 4;
@@ -333,7 +333,7 @@ namespace Hjg.Pngcs {
                 offset += 4;
                 if (PngCsUtils.arraysEqual4(chunkid, ChunkHelper.b_IDAT)) {
                     found = true;
-                    this.CurrentChunkGroup = ChunksList.CHUNK_GROUP_4_IDAT;
+                    CurrentChunkGroup = ChunksList.CHUNK_GROUP_4_IDAT;
                     // add dummy idat chunk to list
                     chunksList.AppendReadChunk(new PngChunkIDAT(ImgInfo, clen, offset - 8), CurrentChunkGroup);
                     break;
@@ -342,10 +342,10 @@ namespace Hjg.Pngcs {
                 }
                 string chunkids = ChunkHelper.ToString(chunkid);
                 if (chunkids.Equals(ChunkHelper.PLTE))
-                    this.CurrentChunkGroup = ChunksList.CHUNK_GROUP_2_PLTE;
+                    CurrentChunkGroup = ChunksList.CHUNK_GROUP_2_PLTE;
                 ReadChunk(chunkid, clen, false);
                 if (chunkids.Equals(ChunkHelper.PLTE))
-                    this.CurrentChunkGroup = ChunksList.CHUNK_GROUP_3_AFTERPLTE;
+                    CurrentChunkGroup = ChunksList.CHUNK_GROUP_3_AFTERPLTE;
             }
             int idatLen = found ? clen : -1;
             if (idatLen < 0)
@@ -738,7 +738,7 @@ namespace Hjg.Pngcs {
         }
 
         public void SetUnpackedMode(bool unPackedMode) {
-            this.unpackedMode = unPackedMode;
+            unpackedMode = unPackedMode;
         }
 
         /**
@@ -757,7 +757,7 @@ namespace Hjg.Pngcs {
         }
 
         internal void InitCrctest() {
-            this.crctest = new Adler32();
+            crctest = new Adler32();
         }
 
     }

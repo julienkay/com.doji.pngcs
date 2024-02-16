@@ -17,7 +17,7 @@
             public CRC32(uint polynomial, uint seed) {
                 table = InitializeTable(polynomial);
                 this.seed = seed;
-                this.hash = seed;
+                hash = seed;
             }
 
             public void Update(byte[] buffer) {
@@ -37,7 +37,7 @@
             }
 
             public void Reset() {
-                this.hash = seed;
+                hash = seed;
             }
         
             private static uint[] InitializeTable(uint polynomial) {

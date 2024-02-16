@@ -13,7 +13,7 @@ namespace Hjg.Pngcs {
         private long countFlushed = 0;
 
         public ProgressiveOutputStream(int size_0) {
-            this.size = size_0;
+            size = size_0;
             if (size < 8) throw new PngjException("bad size for ProgressiveOutputStream: " + size);
         }
 

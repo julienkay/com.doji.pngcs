@@ -42,9 +42,9 @@ namespace Hjg.Pngcs.Chunks {
 
         public override void CloneDataFromRead(PngChunk other) {
             PngChunkOFFS otherx = (PngChunkOFFS)other;
-            this.posX = otherx.posX;
-            this.posY = otherx.posY;
-            this.units = otherx.units;
+            posX = otherx.posX;
+            posY = otherx.posY;
+            units = otherx.units;
         }
         
         /// <summary>

@@ -112,12 +112,12 @@ namespace Hjg.Pngcs {
                 string filename) {
             this.filename = (filename == null) ? "" : filename;
             this.outputStream = outputStream;
-            this.ImgInfo = imgInfo;
+            ImgInfo = imgInfo;
             // defaults settings
-            this.CompLevel = 6;
-            this.ShouldCloseStream = true;
-            this.IdatMaxSize = 0; // use default
-            this.CompressionStrategy = EDeflateCompressStrategy.Filtered;
+            CompLevel = 6;
+            ShouldCloseStream = true;
+            IdatMaxSize = 0; // use default
+            CompressionStrategy = EDeflateCompressStrategy.Filtered;
             // prealloc
             //scanline = new int[imgInfo.SamplesPerRowPacked];
             rowb = new byte[imgInfo.BytesPerRow + 1];
@@ -134,8 +134,8 @@ namespace Hjg.Pngcs {
         /// init: is called automatically before writing the first row
         /// </summary>
         private void init() {
-            datStream = new PngIDatChunkOutputStream(this.outputStream, this.IdatMaxSize);
-            datStreamDeflated = ZlibStreamFactory.createZlibOutputStream(datStream, this.CompLevel, this.CompressionStrategy, true);
+            datStream = new PngIDatChunkOutputStream(outputStream, IdatMaxSize);
+            datStreamDeflated = ZlibStreamFactory.createZlibOutputStream(datStream, CompLevel, CompressionStrategy, true);
             WriteSignatureAndIHDR();
             WriteFirstChunks();
         }
@@ -473,7 +473,7 @@ namespace Hjg.Pngcs {
                 datStream.Close();
                 WriteLastChunks();
                 WriteEndChunk();
-                if (this.ShouldCloseStream)
+                if (ShouldCloseStream)
                     outputStream.Close();
             } catch (IOException e) {
                 throw new PngjOutputException(e);
@@ -576,7 +576,7 @@ namespace Hjg.Pngcs {
         }
 
         public void SetUseUnPackedMode(bool useUnpackedMode) {
-            this.unpackedMode = useUnpackedMode;
+            unpackedMode = useUnpackedMode;
             needsPack = unpackedMode && ImgInfo.Packed;
         }
     }

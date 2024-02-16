@@ -32,9 +32,9 @@ namespace Hjg.Pngcs.Chunks {
 
         public override void CloneDataFromRead(PngChunk other) {
             PngChunkPHYS otherx = (PngChunkPHYS)other;
-            this.PixelsxUnitX = otherx.PixelsxUnitX;
-            this.PixelsxUnitY = otherx.PixelsxUnitY;
-            this.Units = otherx.Units;
+            PixelsxUnitX = otherx.PixelsxUnitX;
+            PixelsxUnitY = otherx.PixelsxUnitY;
+            Units = otherx.Units;
         }
 
         public override void ParseFromRaw(ChunkRaw chunk) {

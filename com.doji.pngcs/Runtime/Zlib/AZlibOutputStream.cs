@@ -12,7 +12,7 @@ namespace Hjg.Pngcs.Zlib {
         public AZlibOutputStream(Stream st, int compressLevel, EDeflateCompressStrategy strat, bool leaveOpen) {
             rawStream = st;
             this.leaveOpen = leaveOpen;
-            this.strategy = strat;
+            strategy = strat;
             this.compressLevel = compressLevel;
         }
 

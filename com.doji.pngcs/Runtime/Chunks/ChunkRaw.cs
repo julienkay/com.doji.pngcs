@@ -36,11 +36,11 @@ namespace Hjg.Pngcs.Chunks {
         /// Creates an empty raw chunk
         /// </summary>
         internal ChunkRaw(int length, string idb, bool alloc) {
-            this.Id = idb;
-            this.IdBytes = ChunkHelper.ToBytes(Id);
-            this.Data = null;
-            this.crcval = 0;
-            this.Len = length;
+            Id = idb;
+            IdBytes = ChunkHelper.ToBytes(Id);
+            Data = null;
+            crcval = 0;
+            Len = length;
             if (alloc)
                 AllocData();
         }

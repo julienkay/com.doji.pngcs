@@ -25,7 +25,7 @@ namespace Hjg.Pngcs.Chunks {
 
         public override ChunkRaw CreateRawChunk() {
             ChunkRaw p = createEmptyChunk(data.Length, false);
-            p.Data = this.data;
+            p.Data = data;
             return p;
         }
 
@@ -40,7 +40,7 @@ namespace Hjg.Pngcs.Chunks {
 
         /* does not copy! */
         public void SetData(byte[] data_0) {
-            this.data = data_0;
+            data = data_0;
         }
 
         public override void CloneDataFromRead(PngChunk other) {

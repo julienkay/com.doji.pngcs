@@ -14,7 +14,7 @@
         public ChunkPredicateId2(string id, string inner)
         {
             this.id = id;
-            this.innerid = inner;
+            innerid = inner;
         }
         public bool Matches(PngChunk c)
         {

@@ -18,7 +18,7 @@ namespace Hjg.Pngcs {
 
         public PngIDatChunkOutputStream(Stream outputStream_0, int size)
             : base(size > 8 ? size : SIZE_DEFAULT) {
-            this.outputStream = outputStream_0;
+            outputStream = outputStream_0;
         }
 
         protected override void FlushBuffer(byte[] b, int len) {

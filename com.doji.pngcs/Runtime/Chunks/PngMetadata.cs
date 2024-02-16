@@ -15,11 +15,11 @@ namespace Hjg.Pngcs.Chunks {
         private readonly bool ReadOnly; // readonly
 
         internal PngMetadata(ChunksList chunks) {
-            this.chunkList = chunks;
+            chunkList = chunks;
             if (chunks is ChunksListForWrite) {
-                this.ReadOnly = false;
+                ReadOnly = false;
             } else {
-                this.ReadOnly = true;
+                ReadOnly = true;
             }
         }
 

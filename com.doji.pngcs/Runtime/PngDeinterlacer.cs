@@ -14,7 +14,7 @@
         private byte[][] imageByte;
 
         internal PngDeinterlacer(ImageInfo iminfo) {
-            this.imi = iminfo;
+            imi = iminfo;
             pass = 0;
             if (imi.Packed) {
                 packedValsPerPixel = 8 / imi.BitDepth;
@@ -42,7 +42,7 @@
         }
 
         internal void setPass(int p) {
-            if (this.pass == p)
+            if (pass == p)
                 return;
             pass = p;
             switch (pass) {

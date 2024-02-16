@@ -23,8 +23,8 @@ namespace Hjg.Pngcs {
             public readonly int len;
             public readonly long offset;
             public IdatChunkInfo(int len_0, long offset_1) {
-                this.len = len_0;
-                this.offset = offset_1;
+                len = len_0;
+                offset = offset_1;
             }
         }
 
@@ -46,22 +46,22 @@ namespace Hjg.Pngcs {
         /// </summary>
         ///
         public PngIDatChunkInputStream(Stream iStream, int lenFirstChunk, long offset_0) {
-            this.idLastChunk = new byte[4];
-            this.toReadThisChunk = 0;
-            this.ended = false;
-            this.foundChunksInfo = new List<IdatChunkInfo>();
-            this.offset = offset_0;
+            idLastChunk = new byte[4];
+            toReadThisChunk = 0;
+            ended = false;
+            foundChunksInfo = new List<IdatChunkInfo>();
+            offset = offset_0;
             checkCrc = true;
             inputStream = iStream;
             crcEngine = new CRC32();
-            this.lenLastChunk = lenFirstChunk;
+            lenLastChunk = lenFirstChunk;
             toReadThisChunk = lenFirstChunk;
             // we know it's a IDAT
             Array.Copy((Array)(Chunks.ChunkHelper.b_IDAT), 0, (Array)(idLastChunk), 0, 4);
             crcEngine.Update(idLastChunk, 0, 4);
             foundChunksInfo.Add(new PngIDatChunkInputStream.IdatChunkInfo(lenLastChunk, offset_0 - 8));
             // PngHelper.logdebug("IDAT Initial fragment: len=" + lenLastChunk);
-            if (this.lenLastChunk == 0)
+            if (lenLastChunk == 0)
                 EndChunkGoForNext(); // rare, but...
         }
 
@@ -135,7 +135,7 @@ namespace Hjg.Pngcs {
             if (n > 0) {
                 if (checkCrc)
                     crcEngine.Update(b, off, n);
-                this.offset += n;
+                offset += n;
                 toReadThisChunk -= n;
             }
             if (n >= 0 && toReadThisChunk == 0) { // end of chunk: prepare for next
@@ -145,14 +145,14 @@ namespace Hjg.Pngcs {
         }
 
         public int Read(byte[] b) {
-            return this.Read(b, 0, b.Length);
+            return Read(b, 0, b.Length);
         }
 
         public override int ReadByte() {
             // PngHelper.logdebug("read() should go here");
             // inneficient - but this should be used rarely
             byte[] b1 = new byte[1];
-            int r = this.Read(b1, 0, 1);
+            int r = Read(b1, 0, 1);
             return (r < 0) ? -1 : (int)b1[0];
         }
 

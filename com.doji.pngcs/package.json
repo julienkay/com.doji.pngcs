@@ -1,0 +1,11 @@
+{
+  "name": "com.doji.pngcs",
+  "version": "0.0.0",
+  "displayName": "PNGCS",
+  "description": "PNG image encoding in C#",
+  "author": {
+    "name": "Doji Technologies",
+    "email": "support@doji-tech.com",
+    "url": "https://www.doji-tech.com/"
+  }
+}

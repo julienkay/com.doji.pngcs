@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System;
 using System.IO;
+using Doji.Pngcs.Chunks;
 
-namespace Doji.Pngcs.Chunks {
+namespace Doji.Pngcs {
 
     public static class PngCS {
 

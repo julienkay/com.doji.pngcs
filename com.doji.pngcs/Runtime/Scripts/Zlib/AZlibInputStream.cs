@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace Hjg.Pngcs.Zlib {
+namespace Doji.Pngcs.Zlib {
 
     public abstract class AZlibInputStream : Stream {
         readonly protected Stream rawStream;

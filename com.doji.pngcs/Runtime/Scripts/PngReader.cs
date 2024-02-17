@@ -1,10 +1,10 @@
-using Hjg.Pngcs.Chunks;
-using Hjg.Pngcs.Zlib;
+using Doji.Pngcs.Chunks;
+using Doji.Pngcs.Zlib;
 using System.Collections.Generic;
 using System.IO;
 using System;
 
-namespace Hjg.Pngcs {
+namespace Doji.Pngcs {
 
     /// <summary>
     /// Reads a PNG image, line by line

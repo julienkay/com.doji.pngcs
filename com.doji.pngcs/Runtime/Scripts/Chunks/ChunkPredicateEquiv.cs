@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs.Chunks {
+﻿namespace Doji.Pngcs.Chunks {
     /// <summary>
     /// An ad-hoc criterion, perhaps useful, for equivalence.
     /// <see cref="ChunkHelper.Equivalent(PngChunk,PngChunk)"/> 

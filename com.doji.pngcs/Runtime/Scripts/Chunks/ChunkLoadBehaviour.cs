@@ -1,4 +1,4 @@
-namespace Hjg.Pngcs.Chunks {
+namespace Doji.Pngcs.Chunks {
     /// <summary>
     /// Defines what to do with non critical chunks when reading
     /// </summary>

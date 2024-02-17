@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Hjg.Pngcs.Chunks {
+namespace Doji.Pngcs.Chunks {
 
 
     /// <summary>Image Metadata, wrapper over a ChunksList</summary>

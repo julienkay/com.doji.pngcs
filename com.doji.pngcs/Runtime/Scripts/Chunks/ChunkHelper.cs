@@ -1,9 +1,9 @@
-using Hjg.Pngcs.Zlib;
+using Doji.Pngcs.Zlib;
 using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Hjg.Pngcs.Chunks {
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// Static utility methods for CHunks

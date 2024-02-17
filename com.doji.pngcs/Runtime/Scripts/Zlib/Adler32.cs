@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs.Zlib {
+﻿namespace Doji.Pngcs.Zlib {
 
     public class Adler32 {
         private uint a = 1;

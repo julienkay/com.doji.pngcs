@@ -1,4 +1,5 @@
-namespace Hjg.Pngcs {
+namespace Doji.Pngcs {
+
     /// <summary>
     /// Internal PNG predictor filter, or a strategy to select it.
     /// </summary>
@@ -50,6 +51,4 @@ namespace Hjg.Pngcs {
         /// </summary>
         FILTER_UNKNOWN = -100
     }
-
-
 }

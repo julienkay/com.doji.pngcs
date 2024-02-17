@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Unity.SharpZipLib.Zip.Compression.Streams;
 
-namespace Hjg.Pngcs.Zlib {
+namespace Doji.Pngcs.Zlib {
 
     /// <summary>
     /// Zip input (inflater) based on ShaprZipLib

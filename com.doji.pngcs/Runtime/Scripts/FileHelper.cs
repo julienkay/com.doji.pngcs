@@ -1,5 +1,6 @@
-namespace Hjg.Pngcs {
-    using System.IO;
+using System.IO;
+
+namespace Doji.Pngcs {
 
     /// <summary>
     /// A few utility static methods to read and write files

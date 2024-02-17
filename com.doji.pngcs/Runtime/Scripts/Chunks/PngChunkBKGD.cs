@@ -1,6 +1,6 @@
-namespace Hjg.Pngcs.Chunks {
+namespace Doji.Pngcs.Chunks {
 
-    using Hjg.Pngcs;
+    using Doji.Pngcs;
 
     /// <summary>
     /// bKGD chunk, see http://www.w3.org/TR/PNG/#11bKGD

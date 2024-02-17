@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs.Chunks {
+﻿namespace Doji.Pngcs.Chunks {
     /// <summary>
     /// Match if have same Chunk Id
     /// </summary>

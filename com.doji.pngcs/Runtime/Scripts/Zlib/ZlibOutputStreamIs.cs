@@ -2,7 +2,7 @@
 using Unity.SharpZipLib.Zip.Compression;
 using Unity.SharpZipLib.Zip.Compression.Streams;
 
-namespace Hjg.Pngcs.Zlib {
+namespace Doji.Pngcs.Zlib {
 
     /// <summary>
     /// Zlib output (deflater) based on ShaprZipLib

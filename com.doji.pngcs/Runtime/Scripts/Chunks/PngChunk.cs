@@ -1,6 +1,6 @@
-namespace Hjg.Pngcs.Chunks {
+namespace Doji.Pngcs.Chunks {
 
-    using Hjg.Pngcs;
+    using Doji.Pngcs;
     using System;
     using System.Collections.Generic;
     using System.IO;

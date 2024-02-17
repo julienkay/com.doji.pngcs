@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs {
+﻿namespace Doji.Pngcs {
     class PngDeinterlacer {
         private readonly ImageInfo imi;
         private int pass; // 1-7

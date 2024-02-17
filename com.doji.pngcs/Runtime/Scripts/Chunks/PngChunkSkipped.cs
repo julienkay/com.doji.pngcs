@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs.Chunks {
+﻿namespace Doji.Pngcs.Chunks {
     class PngChunkSkipped : PngChunk {
         internal PngChunkSkipped(string id, ImageInfo imgInfo, int clen)
             : base(id, imgInfo) {

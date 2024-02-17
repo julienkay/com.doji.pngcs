@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs.Zlib {
+﻿namespace Doji.Pngcs.Zlib {
     public enum EDeflateCompressStrategy {
         Filtered,
         Huffman,

@@ -1,4 +1,4 @@
-namespace Hjg.Pngcs {
+namespace Doji.Pngcs {
     /// <summary>
     /// Simple immutable wrapper for basic image info
     /// </summary>

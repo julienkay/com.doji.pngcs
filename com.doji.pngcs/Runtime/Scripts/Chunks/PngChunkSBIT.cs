@@ -1,6 +1,6 @@
-namespace Hjg.Pngcs.Chunks {
+namespace Doji.Pngcs.Chunks {
 
-    using Hjg.Pngcs;
+    using Doji.Pngcs;
 
     /// <summary>
     /// sBIT chunk: http://www.w3.org/TR/PNG/#11sBIT

@@ -1,9 +1,9 @@
-using Hjg.Pngcs.Zlib;
+using Doji.Pngcs.Zlib;
 using System;
 using System.IO;
 using System.Text;
 
-namespace Hjg.Pngcs {
+namespace Doji.Pngcs {
 
     /// <summary>
     /// Some utility static methods for internal use.

@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs.Zlib {
+﻿namespace Doji.Pngcs.Zlib {
 
     public class CRC32 { // based on http://damieng.com/blog/2006/08/08/calculating_crc32_in_c_and_net
 

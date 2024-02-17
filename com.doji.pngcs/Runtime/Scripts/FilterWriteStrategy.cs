@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Hjg.Pngcs {
+namespace Doji.Pngcs {
     /// <summary>
     /// Manages the writer strategy for selecting the internal png predictor filter
     /// </summary>

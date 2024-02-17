@@ -1,9 +1,9 @@
-using Hjg.Pngcs.Chunks;
-using Hjg.Pngcs.Zlib;
+using Doji.Pngcs.Chunks;
+using Doji.Pngcs.Zlib;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Hjg.Pngcs {
+namespace Doji.Pngcs {
 
     /// <summary>
     ///  Writes a PNG image, line by line.

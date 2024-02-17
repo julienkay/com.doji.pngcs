@@ -1,4 +1,4 @@
-namespace Hjg.Pngcs {
+namespace Doji.Pngcs {
 
     using System;
 

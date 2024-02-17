@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs.Chunks {
+﻿namespace Doji.Pngcs.Chunks {
     /// <summary>
     /// match if have same id and, if Text (or SPLT) if have the asame key
     /// </summary>

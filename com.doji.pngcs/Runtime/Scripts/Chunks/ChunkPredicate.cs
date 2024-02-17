@@ -1,4 +1,4 @@
-﻿namespace Hjg.Pngcs.Chunks {
+﻿namespace Doji.Pngcs.Chunks {
     /// <summary>
     /// Decides if another chunk "matches", according to some criterion
     /// </summary>

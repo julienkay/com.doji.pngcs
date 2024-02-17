@@ -30,7 +30,6 @@ namespace Doji.Pngcs.Chunks {
         /// </summary>
         public byte[] Data;
         private int crcval;
-        private long offset = 0;
 
         /// <summary>
         /// Creates an empty raw chunk

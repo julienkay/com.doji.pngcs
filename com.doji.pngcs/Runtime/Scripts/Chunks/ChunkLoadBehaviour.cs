@@ -21,6 +21,5 @@ namespace Doji.Pngcs.Chunks {
         ///  Notice that other restrictions might apply, see PngReader.SkipChunkMaxSize PngReader.SkipChunkIds
         /// </summary>
         LOAD_CHUNK_ALWAYS,
-
     }
 }

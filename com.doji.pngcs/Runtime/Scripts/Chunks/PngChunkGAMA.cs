@@ -1,7 +1,4 @@
 namespace Doji.Pngcs.Chunks {
-
-    using Doji.Pngcs;
-
     /// <summary>
     /// gAMA chunk, see http://www.w3.org/TR/PNG/#11gAMA
     /// </summary>

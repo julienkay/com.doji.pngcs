@@ -743,9 +743,9 @@ namespace Doji.Pngcs {
             unpackedMode = unPackedMode;
         }
 
-        /**
-         * @see PngReader#setUnpackedMode(boolean)
-         */
+        /// <summary>
+        /// <see cref="PngReader.SetUnpackedMode(bool)"/>
+        /// </summary>
         public bool IsUnpackedMode() {
             return unpackedMode;
         }

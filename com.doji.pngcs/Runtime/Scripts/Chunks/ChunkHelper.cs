@@ -12,6 +12,7 @@ namespace Doji.Pngcs.Chunks {
     /// Client code should rarely need this, see PngMetada and ChunksList
     /// </remarks>
     public class ChunkHelper {
+
         internal const string IHDR = "IHDR";
         internal const string PLTE = "PLTE";
         internal const string IDAT = "IDAT";
@@ -34,8 +35,6 @@ namespace Doji.Pngcs.Chunks {
         internal static readonly byte[] b_PLTE = ToBytes(PLTE);
         internal static readonly byte[] b_IDAT = ToBytes(IDAT);
         internal static readonly byte[] b_IEND = ToBytes(IEND);
-
-
 
         /// <summary>
         /// Converts to bytes using Latin1 (ISO-8859-1)
@@ -282,6 +281,5 @@ namespace Doji.Pngcs.Chunks {
         public static bool IsText(PngChunk c) {
             return c is PngChunkTextVar;
         }
-
     }
 }

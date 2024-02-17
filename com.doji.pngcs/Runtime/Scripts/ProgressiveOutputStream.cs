@@ -1,7 +1,7 @@
-namespace Doji.Pngcs {
+using System;
+using System.IO;
 
-    using System;
-    using System.IO;
+namespace Doji.Pngcs {
 
     /// <summary>
     /// stream that outputs to memory and allows to flush fragments every 'size'

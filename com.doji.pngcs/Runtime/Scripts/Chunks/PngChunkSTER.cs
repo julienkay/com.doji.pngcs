@@ -1,11 +1,10 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-
     /// <summary>
     /// sTER chunk: http://www.libpng.org/pub/png/spec/register/pngext-1.3.0-pdg.html#C.sTER
     /// </summary>
     public class PngChunkSTER : PngChunkSingle {
+
         public const string ID = "sTER";
 
         /// <summary>
@@ -14,8 +13,8 @@ namespace Doji.Pngcs.Chunks {
         public byte Mode { get; set; }
 
         public PngChunkSTER(ImageInfo info)
-            : base(ID, info) { }
-
+            : base(ID, info) {
+        }
 
         public override ChunkOrderingConstraint GetOrderingConstraint() {
             return ChunkOrderingConstraint.BEFORE_IDAT;

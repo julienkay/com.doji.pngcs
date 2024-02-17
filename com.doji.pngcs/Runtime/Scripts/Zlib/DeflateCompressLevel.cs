@@ -6,4 +6,3 @@
         public const int OPTIMAL = 9;
     }
 }
-

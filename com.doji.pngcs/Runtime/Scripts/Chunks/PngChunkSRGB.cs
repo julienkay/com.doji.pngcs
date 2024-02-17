@@ -1,11 +1,10 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-
     /// <summary>
     /// sRGB chunk: http://www.w3.org/TR/PNG/#11sRGB
     /// </summary>
     public class PngChunkSRGB : PngChunkSingle {
+
         public const string ID = ChunkHelper.sRGB;
 
         public const int RENDER_INTENT_Perceptual = 0;
@@ -36,12 +35,9 @@ namespace Doji.Pngcs.Chunks {
             Intent = PngHelperInternal.ReadInt1fromByte(c.Data, 0);
         }
 
-
         public override void CloneDataFromRead(PngChunk other) {
             PngChunkSRGB otherx = (PngChunkSRGB)other;
             Intent = otherx.Intent;
         }
-
-
     }
 }

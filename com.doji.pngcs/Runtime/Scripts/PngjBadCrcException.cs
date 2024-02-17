@@ -1,6 +1,6 @@
-namespace Doji.Pngcs {
+using System;
 
-    using System;
+namespace Doji.Pngcs {
 
     /// <summary>
     /// Exception for CRC check

@@ -1,10 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
 namespace Doji.Pngcs.Chunks {
-
-    using Doji.Pngcs;
-    using System;
-    using System.Collections.Generic;
-    using System.IO;
-
 
     /// <summary>
     /// Represents a instance of a PNG chunk
@@ -19,6 +17,7 @@ namespace Doji.Pngcs.Chunks {
     /// Ref: http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html
     /// </remarks>
     public abstract class PngChunk {
+
         /// <summary>
         /// 4 letters. The Id almost determines the concrete type (except for PngUKNOWN)
         /// </summary>
@@ -231,7 +230,5 @@ namespace Doji.Pngcs.Chunks {
         /// </summary>
         /// <returns></returns>
         public abstract ChunkOrderingConstraint GetOrderingConstraint();
-
-
     }
 }

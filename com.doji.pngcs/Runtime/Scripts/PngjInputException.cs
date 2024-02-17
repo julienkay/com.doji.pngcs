@@ -1,13 +1,12 @@
-namespace Doji.Pngcs {
+using System;
 
-    using System;
+namespace Doji.Pngcs {
 
     /// <summary>
     /// Exception associated with input (reading) operations
     /// </summary>
     [Serializable]
     public class PngjInputException : PngjException {
-        private const long serialVersionUID = 1L;
 
         public PngjInputException(string message, Exception cause)
             : base(message, cause) {

@@ -2,7 +2,6 @@
 
 namespace Doji.Pngcs.Chunks {
 
-
     /// <summary>Image Metadata, wrapper over a ChunksList</summary>
     /// <remarks>
     /// Additional image info, apart from the ImageInfo and the pixels themselves. 
@@ -11,6 +10,7 @@ namespace Doji.Pngcs.Chunks {
     /// level methods to access them
     /// </remarks>
     public class PngMetadata {
+
         private readonly ChunksList chunkList;
         private readonly bool ReadOnly; // readonly
 
@@ -221,18 +221,17 @@ namespace Doji.Pngcs.Chunks {
             return plte;
         }
 
-        /**
-         * Returns the TRNS chunk, if present
-         * 
-         * @return null if not present
-         */
+        /// <summary>
+        /// Returns the TRNS chunk, if present
+        /// </summary>
+        /// <returns>null if not present</returns>
         public PngChunkTRNS GetTRNS() {
             return (PngChunkTRNS)chunkList.GetById1(PngChunkTRNS.ID);
         }
 
-        /**
-         * Creates a new empty TRNS chunk, queues it for write and return it to the caller, who should fill its entries
-         */
+        /// <summary>
+        /// Creates a new empty TRNS chunk, queues it for write and return it to the caller, who should fill its entries
+        /// </summary>
         public PngChunkTRNS CreateTRNSChunk() {
             PngChunkTRNS trns = new PngChunkTRNS(chunkList.imageInfo);
             QueueChunk(trns);

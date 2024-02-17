@@ -1,12 +1,12 @@
-namespace Doji.Pngcs.Chunks {
+using System;
 
-    using Doji.Pngcs;
-    using System;
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// tIME chunk: http://www.w3.org/TR/PNG/#11tIME
     /// </summary>
     public class PngChunkTIME : PngChunkSingle {
+
         public const string ID = ChunkHelper.tIME;
 
         private int year, mon, day, hour, min, sec;
@@ -74,7 +74,9 @@ namespace Doji.Pngcs.Chunks {
             return new int[] { year, mon, day, hour, min, sec };
         }
 
-        /** format YYYY/MM/DD HH:mm:SS */
+        /// <summary>
+        /// format YYYY/MM/DD HH:mm:SS
+        /// </summary>
         public string GetAsString() {
             return string.Format("%04d/%02d/%02d %02d:%02d:%02d", year, mon, day, hour, min, sec);
         }

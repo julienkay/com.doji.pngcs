@@ -1,12 +1,12 @@
-namespace Doji.Pngcs.Chunks {
+using System;
 
-    using Doji.Pngcs;
-    using System;
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// iCCP Chunk: see http://www.w3.org/TR/PNG/#11iCCP
     /// </summary>
     public class PngChunkICCP : PngChunkSingle {
+
         public const string ID = ChunkHelper.iCCP;
 
         private string profileName;
@@ -20,7 +20,6 @@ namespace Doji.Pngcs.Chunks {
         public override ChunkOrderingConstraint GetOrderingConstraint() {
             return ChunkOrderingConstraint.BEFORE_PLTE_AND_IDAT;
         }
-
 
         public override ChunkRaw CreateRawChunk() {
             ChunkRaw c = createEmptyChunk(profileName.Length + compressedProfile.Length + 2, true);
@@ -69,7 +68,6 @@ namespace Doji.Pngcs.Chunks {
             compressedProfile = ChunkHelper.compressBytes(profile, true);
         }
 
-
         public string GetProfileName() {
             return profileName;
         }
@@ -85,6 +83,5 @@ namespace Doji.Pngcs.Chunks {
         public string GetProfileAsString() {
             return ChunkHelper.ToString(GetProfile());
         }
-
     }
 }

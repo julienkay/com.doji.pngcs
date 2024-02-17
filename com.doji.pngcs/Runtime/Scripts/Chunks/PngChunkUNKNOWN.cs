@@ -1,7 +1,7 @@
+using System;
+
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-    using System;
     /// <summary>
     /// Unknown (for our chunk factory) chunk type.
     /// </summary>
@@ -33,12 +33,16 @@ namespace Doji.Pngcs.Chunks {
             data = c.Data;
         }
 
-        /* does not copy! */
+        /// <summary>
+        /// does not copy!
+        /// </summary>
         public byte[] GetData() {
             return data;
         }
 
-        /* does not copy! */
+        /// <summary>
+        /// does not copy!
+        /// </summary>
         public void SetData(byte[] data_0) {
             data = data_0;
         }

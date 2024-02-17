@@ -1,11 +1,10 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-
     /// <summary>
     /// oFFs chunk: http://www.libpng.org/pub/png/spec/register/pngext-1.3.0-pdg.html#C.oFFs
     /// </summary>
     public class PngChunkOFFS : PngChunkSingle {
+
         public const string ID = "oFFs";
 
         private long posX;

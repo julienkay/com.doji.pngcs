@@ -1,6 +1,7 @@
+using System.Collections.Generic;
+using System.Text;
+
 namespace Doji.Pngcs.Chunks {
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// All chunks that form an image, read or to be written
@@ -9,13 +10,14 @@ namespace Doji.Pngcs.Chunks {
     /// </summary>
     ///
     public class ChunksList {
-        internal const int CHUNK_GROUP_0_IDHR = 0; // required - single
+
+        internal const int CHUNK_GROUP_0_IDHR      = 0; // required - single
         internal const int CHUNK_GROUP_1_AFTERIDHR = 1; // optional - multiple
-        internal const int CHUNK_GROUP_2_PLTE = 2; // optional - single
+        internal const int CHUNK_GROUP_2_PLTE      = 2; // optional - single
         internal const int CHUNK_GROUP_3_AFTERPLTE = 3; // optional - multple
-        internal const int CHUNK_GROUP_4_IDAT = 4; // required (single pseudo chunk)
+        internal const int CHUNK_GROUP_4_IDAT      = 4; // required (single pseudo chunk)
         internal const int CHUNK_GROUP_5_AFTERIDAT = 5; // optional - multple
-        internal const int CHUNK_GROUP_6_END = 6; // only 1 chunk - requried
+        internal const int CHUNK_GROUP_6_END       = 6; // only 1 chunk - requried
 
         /// <summary>
         ///  Includes all chunks, but IDAT is a single pseudo chunk without data
@@ -140,6 +142,7 @@ namespace Doji.Pngcs.Chunks {
         public override string ToString() {
             return "ChunkList: read: " + chunks.Count;
         }
+
         /// <summary>
         /// Detailed information, for debugging
         /// </summary>
@@ -152,6 +155,5 @@ namespace Doji.Pngcs.Chunks {
             }
             return sb.ToString();
         }
-
     }
 }

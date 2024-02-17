@@ -1,4 +1,5 @@
 ﻿namespace Doji.Pngcs {
+
     /// <summary>
     /// Wraps a set of rows from a image, read in a single operation, stored in a int[][] or byte[][] matrix
     /// 

@@ -1,12 +1,12 @@
-namespace Doji.Pngcs.Chunks {
+using System;
 
-    using Doji.Pngcs;
-    using System;
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// tRNS chunk: http://www.w3.org/TR/PNG/#11tRNS
     /// </summary>
     public class PngChunkTRNS : PngChunkSingle {
+
         public const string ID = ChunkHelper.tRNS;
 
         // this chunk structure depends on the image type

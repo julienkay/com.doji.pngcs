@@ -1,11 +1,10 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-
     /// <summary>
     /// bKGD chunk, see http://www.w3.org/TR/PNG/#11bKGD
     /// </summary>
     public class PngChunkBKGD : PngChunkSingle {
+
         public const string ID = ChunkHelper.bKGD;
 
         // this chunk structure depends on the image type
@@ -120,6 +119,5 @@ namespace Doji.Pngcs.Chunks {
                 throw new PngjException("only rgb or rgba images support this");
             return new int[] { red, green, blue };
         }
-
     }
 }

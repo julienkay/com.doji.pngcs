@@ -1,12 +1,13 @@
+using System.IO;
+
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-    using System.IO;
     /// <summary>
     /// iTXt chunk:  http://www.w3.org/TR/PNG/#11iTXt
     /// One of the three text chunks
     /// </summary>
     public class PngChunkITXT : PngChunkTextVar {
+
         public const string ID = ChunkHelper.iTXt;
 
         private bool compressed = false;

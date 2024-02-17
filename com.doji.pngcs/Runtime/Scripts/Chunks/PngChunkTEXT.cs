@@ -1,12 +1,12 @@
-namespace Doji.Pngcs.Chunks {
+using System;
 
-    using Doji.Pngcs;
-    using System;
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// tEXt chunk: latin1 uncompressed text
     /// </summary>
     public class PngChunkTEXT : PngChunkTextVar {
+
         public const string ID = ChunkHelper.tEXt;
 
         public PngChunkTEXT(ImageInfo info)

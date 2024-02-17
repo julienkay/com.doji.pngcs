@@ -1,10 +1,10 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
     /// <summary>
     /// IEND chunk  http://www.w3.org/TR/PNG/#11IEND
     /// </summary>
     public class PngChunkIEND : PngChunkSingle {
+
         public const string ID = ChunkHelper.IEND;
 
         public PngChunkIEND(ImageInfo info)
@@ -20,11 +20,8 @@ namespace Doji.Pngcs.Chunks {
             return c;
         }
 
-        public override void ParseFromRaw(ChunkRaw c) {
-            // this is not used
-        }
+        public override void ParseFromRaw(ChunkRaw c) { }
 
-        public override void CloneDataFromRead(PngChunk other) {
-        }
+        public override void CloneDataFromRead(PngChunk other) { }
     }
 }

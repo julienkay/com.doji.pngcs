@@ -1,13 +1,12 @@
-namespace Doji.Pngcs {
+using System;
 
-    using System;
+namespace Doji.Pngcs {
 
     /// <summary>
     /// Gral exception class for PNGCS library
     /// </summary>
     [Serializable]
     public class PngjException : Exception {
-        private const long serialVersionUID = 1L;
 
         public PngjException(string message, Exception cause)
             : base(message, cause) {

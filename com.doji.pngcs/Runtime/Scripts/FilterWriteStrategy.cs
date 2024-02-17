@@ -1,10 +1,12 @@
 ﻿using System;
 
 namespace Doji.Pngcs {
+
     /// <summary>
     /// Manages the writer strategy for selecting the internal png predictor filter
     /// </summary>
     internal class FilterWriteStrategy {
+
         private static readonly int COMPUTE_STATS_EVERY_N_LINES = 8;
 
         private readonly ImageInfo imgInfo;

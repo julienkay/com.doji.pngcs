@@ -1,8 +1,7 @@
-namespace Doji.Pngcs.Chunks {
+using System.Collections.Generic;
+using System.IO;
 
-    using Doji.Pngcs;
-    using System.Collections.Generic;
-    using System.IO;
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// Chunks written or queued to be written 

@@ -1,5 +1,5 @@
 ﻿namespace Doji.Pngcs.Chunks {
-    class PngChunkSkipped : PngChunk {
+    public class PngChunkSkipped : PngChunk {
         internal PngChunkSkipped(string id, ImageInfo imgInfo, int clen)
             : base(id, imgInfo) {
             Length = clen;
@@ -24,8 +24,5 @@
         public override ChunkOrderingConstraint GetOrderingConstraint() {
             return ChunkOrderingConstraint.NONE;
         }
-
-
-
     }
 }

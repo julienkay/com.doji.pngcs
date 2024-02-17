@@ -57,6 +57,5 @@
                 defaultTable = createTable;
             return createTable;
         }
-
     }
 }

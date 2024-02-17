@@ -1,4 +1,5 @@
 ﻿namespace Doji.Pngcs.Chunks {
+
     /// <summary>
     /// Behaviours for chunks transfer when reading and writing.
     /// </summary>

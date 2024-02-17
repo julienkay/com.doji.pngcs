@@ -1,14 +1,13 @@
+using System;
+
 namespace Doji.Pngcs.Chunks {
-
-    using Doji.Pngcs;
-    using System;
-
 
     /// <summary>
     /// hIST chunk, see http://www.w3.org/TR/PNG/#11hIST
     /// Only for palette images
     /// </summary>
     public class PngChunkHIST : PngChunkSingle {
+
         public readonly static string ID = ChunkHelper.hIST;
 
         private int[] hist = new int[0]; // should have same lenght as palette
@@ -58,6 +57,5 @@ namespace Doji.Pngcs.Chunks {
         public void SetHist(int[] hist) {
             this.hist = hist;
         }
-
     }
 }

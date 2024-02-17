@@ -1,10 +1,10 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
     /// <summary>
     /// general class for textual chunks
     /// </summary>
     public abstract class PngChunkTextVar : PngChunkMultiple {
+
         protected internal string key; // key/val: only for tEXt. lazy computed
         protected internal string val;
 

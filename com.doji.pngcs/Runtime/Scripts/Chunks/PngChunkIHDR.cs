@@ -1,13 +1,14 @@
-namespace Doji.Pngcs.Chunks {
+using System.IO;
 
-    using Doji.Pngcs;
-    using System.IO;
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// IHDR chunk: http://www.w3.org/TR/PNG/#11IHDR
     /// </summary>
     public class PngChunkIHDR : PngChunkSingle {
+
         public const string ID = ChunkHelper.IHDR;
+
         public int Cols { get; set; }
         public int Rows { get; set; }
         public int Bitspc { get; set; }

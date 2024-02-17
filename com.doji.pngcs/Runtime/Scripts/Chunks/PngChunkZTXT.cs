@@ -1,12 +1,12 @@
+using System.IO;
+
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-    using System.IO;
     /// <summary>
     /// zTXt chunk: http://www.w3.org/TR/PNG/#11zTXt
-    /// 
     /// </summary>
     public class PngChunkZTXT : PngChunkTextVar {
+
         public const string ID = ChunkHelper.zTXt;
 
         public PngChunkZTXT(ImageInfo info)

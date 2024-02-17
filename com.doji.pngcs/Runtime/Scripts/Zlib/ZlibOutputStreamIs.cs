@@ -11,6 +11,7 @@ namespace Doji.Pngcs.Zlib {
 
         private DeflaterOutputStream ost;
         private Deflater deflater;
+
         public ZlibOutputStreamIs(Stream st, int compressLevel, EDeflateCompressStrategy strat, bool leaveOpen)
             : base(st, compressLevel, strat, leaveOpen) {
             deflater = new Deflater(compressLevel);
@@ -39,7 +40,6 @@ namespace Doji.Pngcs.Zlib {
         public override void Close() {
             ost.Close();
         }
-
 
         public override void Flush() {
             ost.Flush();

@@ -1,7 +1,6 @@
+using System;
+
 namespace Doji.Pngcs {
-
-    using System;
-
 
     /// <summary>
     /// Lightweight wrapper for an image scanline, for read and write
@@ -10,6 +9,7 @@ namespace Doji.Pngcs {
     /// See <c>scanline</c> field doc, to understand the format.
     ///</remarks>
     public class ImageLine {
+
         /// <summary>
         /// ImageInfo (readonly inmutable)
         /// </summary>

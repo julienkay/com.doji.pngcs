@@ -9,6 +9,7 @@ namespace Doji.Pngcs {
     ///  Writes a PNG image, line by line.
     /// </summary>
     public class PngWriter {
+
         /// <summary>
         /// Basic image info, inmutable
         /// </summary>
@@ -21,9 +22,9 @@ namespace Doji.Pngcs {
 
         private FilterWriteStrategy filterStrat;
 
-        /**
-         * Deflate algortithm compression strategy
-         */
+        /// <summary>
+        /// Deflate algortithm compression strategy
+        /// </summary>
         public EDeflateCompressStrategy CompressionStrategy { get; set; }
 
         /// <summary>
@@ -534,18 +535,17 @@ namespace Doji.Pngcs {
             filterAndSend(rown);
         }
 
-
-        /**
-         * Writes all the pixels, calling writeRowInt() for each image row
-         */
+        /// <summary>
+        /// Writes all the pixels, calling writeRowInt() for each image row
+        /// </summary>
         public void WriteRowsInt(int[][] image) {
             for (int i = 0; i < ImgInfo.Rows; i++)
                 WriteRowInt(image[i], i);
         }
 
-        /**
-         * Writes all the pixels, calling writeRowByte() for each image row
-         */
+        /// <summary>
+        /// Writes all the pixels, calling writeRowByte() for each image row
+        /// </summary>
         public void WriteRowsByte(byte[][] image) {
             for (int i = 0; i < ImgInfo.Rows; i++)
                 WriteRowByte(image[i], i);

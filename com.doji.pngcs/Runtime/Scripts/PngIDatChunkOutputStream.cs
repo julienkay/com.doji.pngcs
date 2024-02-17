@@ -1,7 +1,7 @@
-namespace Doji.Pngcs {
+using Doji.Pngcs.Chunks;
+using System.IO;
 
-    using Doji.Pngcs.Chunks;
-    using System.IO;
+namespace Doji.Pngcs {
 
     /// <summary>
     /// outputs the stream for IDAT chunk , fragmented at fixed size (32k default).

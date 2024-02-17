@@ -1,14 +1,15 @@
-namespace Doji.Pngcs.Chunks {
+using System;
+using System.IO;
 
-    using Doji.Pngcs;
-    using System;
-    using System.IO;
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// sPLT chunk: http://www.w3.org/TR/PNG/#11sPLT
     /// </summary>
     public class PngChunkSPLT : PngChunkMultiple {
+
         public const string ID = ChunkHelper.sPLT;
+
         /// <summary>
         /// Must be unique in image
         /// </summary>
@@ -26,7 +27,6 @@ namespace Doji.Pngcs.Chunks {
             : base(ID, info) {
             PalName = "";
         }
-
 
         public override ChunkOrderingConstraint GetOrderingConstraint() {
             return ChunkOrderingConstraint.BEFORE_IDAT;
@@ -107,6 +107,5 @@ namespace Doji.Pngcs.Chunks {
         public int GetNentries() {
             return Palette.Length / 5;
         }
-
     }
 }

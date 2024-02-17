@@ -1,4 +1,5 @@
 ﻿namespace Doji.Pngcs.Chunks {
+
     /// <summary>
     /// An ad-hoc criterion, perhaps useful, for equivalence.
     /// <see cref="ChunkHelper.Equivalent(PngChunk,PngChunk)"/> 
@@ -6,6 +7,7 @@
     internal class ChunkPredicateEquiv : ChunkPredicate {
 
         private readonly PngChunk chunk;
+
         /// <summary>
         /// Creates predicate based of reference chunk
         /// </summary>
@@ -13,6 +15,7 @@
         public ChunkPredicateEquiv(PngChunk chunk) {
             this.chunk = chunk;
         }
+
         /// <summary>
         /// Check for match
         /// </summary>
@@ -22,5 +25,4 @@
             return ChunkHelper.Equivalent(c, chunk);
         }
     }
-
 }

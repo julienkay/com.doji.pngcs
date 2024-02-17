@@ -1,7 +1,6 @@
-namespace Doji.Pngcs.Chunks {
+using System;
 
-    using Doji.Pngcs;
-    using System;
+namespace Doji.Pngcs.Chunks {
 
     /// <summary>
     /// PLTE Palette chunk: this is the only optional critical chunk
@@ -9,6 +8,7 @@ namespace Doji.Pngcs.Chunks {
     /// http://www.w3.org/TR/PNG/#11PLTE
     /// </summary>
     public class PngChunkPLTE : PngChunkSingle {
+
         public const string ID = ChunkHelper.PLTE;
 
         private int nentries = 0;
@@ -123,5 +123,4 @@ namespace Doji.Pngcs.Chunks {
                 return 8;
         }
     }
-
 }

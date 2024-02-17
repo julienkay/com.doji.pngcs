@@ -4,6 +4,7 @@ using System.IO;
 namespace Doji.Pngcs.Zlib {
 
     public abstract class AZlibOutputStream : Stream {
+
         readonly protected Stream rawStream;
         readonly protected bool leaveOpen;
         protected int compressLevel;
@@ -41,7 +42,6 @@ namespace Doji.Pngcs.Zlib {
         public override long Length {
             get { throw new NotImplementedException(); }
         }
-
 
         public override int Read(byte[] buffer, int offset, int count) {
             throw new NotImplementedException();

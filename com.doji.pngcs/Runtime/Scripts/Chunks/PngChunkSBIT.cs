@@ -1,13 +1,12 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-
     /// <summary>
     /// sBIT chunk: http://www.w3.org/TR/PNG/#11sBIT
     /// 
     /// this chunk structure depends on the image type
     /// </summary>
     public class PngChunkSBIT : PngChunkSingle {
+
         public const string ID = ChunkHelper.sBIT;
 
         //	significant bits
@@ -21,11 +20,9 @@ namespace Doji.Pngcs.Chunks {
             : base(ID, info) {
         }
 
-
         public override ChunkOrderingConstraint GetOrderingConstraint() {
             return ChunkOrderingConstraint.BEFORE_PLTE_AND_IDAT;
         }
-
 
         public override void ParseFromRaw(ChunkRaw c) {
             if (c.Len != GetLen())
@@ -59,7 +56,6 @@ namespace Doji.Pngcs.Chunks {
             }
             return c;
         }
-
 
         public override void CloneDataFromRead(PngChunk other) {
             PngChunkSBIT otherx = (PngChunkSBIT)other;

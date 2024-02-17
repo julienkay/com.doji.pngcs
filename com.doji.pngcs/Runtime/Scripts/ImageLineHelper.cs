@@ -1,7 +1,7 @@
-namespace Doji.Pngcs {
+using Doji.Pngcs.Chunks;
+using System;
 
-    using Doji.Pngcs.Chunks;
-    using System;
+namespace Doji.Pngcs {
 
     /// <summary>
     /// Bunch of utility static methods to process/analyze an image line. 

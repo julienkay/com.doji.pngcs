@@ -1,10 +1,10 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
     /// <summary>
     /// pHYs chunk: http://www.w3.org/TR/PNG/#11pHYs
     /// </summary>
     public class PngChunkPHYS : PngChunkSingle {
+
         public const string ID = ChunkHelper.pHYs;
 
         public long PixelsxUnitX { get; set; }
@@ -84,7 +84,5 @@ namespace Doji.Pngcs.Chunks {
             PixelsxUnitX = (long)(dpix / 0.0254 + 0.5);
             PixelsxUnitY = (long)(dpiy / 0.0254 + 0.5);
         }
-
-
     }
 }

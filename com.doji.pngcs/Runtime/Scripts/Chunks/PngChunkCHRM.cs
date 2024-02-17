@@ -1,11 +1,10 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
-
     /// <summary>
     /// cHRM chunk, see http://www.w3.org/TR/PNG/#11cHRM
     /// </summary>
     public class PngChunkCHRM : PngChunkSingle {
+
         public const string ID = ChunkHelper.cHRM;
 
         private double whitex, whitey;

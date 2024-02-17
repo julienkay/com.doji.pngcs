@@ -1,4 +1,5 @@
 ﻿namespace Doji.Pngcs {
+
     /// <summary>
     /// Utility functions for C# porting
     /// </summary>

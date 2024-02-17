@@ -1,4 +1,5 @@
 namespace Doji.Pngcs {
+
     /// <summary>
     /// Simple immutable wrapper for basic image info
     /// </summary>
@@ -8,6 +9,7 @@ namespace Doji.Pngcs {
     /// http://www.w3.org/TR/PNG/#11IHDR
     /// </remarks>
     public class ImageInfo {
+
         private const int MAX_COLS_ROWS_VAL = 400000; // very big value, but no so ridiculous as 2^32
 
         /// <summary>

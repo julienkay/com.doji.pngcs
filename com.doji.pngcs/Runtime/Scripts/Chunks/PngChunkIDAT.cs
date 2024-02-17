@@ -1,12 +1,12 @@
 namespace Doji.Pngcs.Chunks {
 
-    using Doji.Pngcs;
     /// <summary>
     /// IDAT chunk http://www.w3.org/TR/PNG/#11IDAT
     /// 
     /// This object is dummy placeholder - We treat this chunk in a very different way than ancillary chnks
     /// </summary>
     public class PngChunkIDAT : PngChunkMultiple {
+
         public const string ID = ChunkHelper.IDAT;
 
         public PngChunkIDAT(ImageInfo i, int len, long offset)

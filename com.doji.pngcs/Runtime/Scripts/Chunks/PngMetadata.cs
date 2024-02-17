@@ -175,7 +175,7 @@ namespace Doji.Pngcs.Chunks {
         /// <param name="val">Text</param>
         /// <returns>The created and enqueued chunk</returns>
         public PngChunkTextVar SetText(string key, string val) {
-            return SetText(key, val, false, false);
+            return SetText(key, val, true, false);
         }
 
         /// <summary>

@@ -21,5 +21,5 @@ Changes:
 The main use I have for this is to read/write PNG metadata, which Unity's [EncodeToPNG] method doesn't support.
 
 [OpenUPM]: https://openupm.com/packages/com.doji.pngcs
-[SharpZipLib]: https://docs.unity3d.com/Packages/com.unity.sharp-zip-lib
+[SharpZipLib]: https://docs.unity3d.com/Packages/com.unity.sharp-zip-lib@latest
 [EncodeToPNG]: https://docs.unity3d.com/ScriptReference/ImageConversion.EncodeToPNG.html
